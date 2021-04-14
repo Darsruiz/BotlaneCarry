@@ -11,12 +11,14 @@ import { MainComponent } from './pages/main/main.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button'; 
+import {MatButtonModule} from '@angular/material/button';
+import { ChampionComponent } from './pages/champion/champion.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    ChampionComponent
   ],
   imports: [
     BrowserModule,

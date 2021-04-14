@@ -1,0 +1,21 @@
+mat-grid-tile {
+  // background: lightblue;
+  p {
+    position: absolute;
+    top: 45%;
+    color: rgb(220, 220, 220);
+    z-index: 0;
+    font-size: 3rem;
+
+  }
+}
+
+img {
+  z-index: 1;
+  max-width:100%;
+}
+
+img:hover {
+  filter:opacity(0);
+  transition: filter 0.35s ease-in-out;
+}
