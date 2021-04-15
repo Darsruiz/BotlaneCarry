@@ -1,21 +1,28 @@
 mat-grid-tile {
   // background: lightblue;
+  mat-grid-tile-footer {
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    justify-content: center;
+    font-size: 100%;
+  }
   p {
     position: absolute;
     top: 45%;
     color: rgb(220, 220, 220);
     z-index: 0;
     font-size: 3rem;
-
   }
 }
 
 img {
   z-index: 1;
   max-width:100%;
+  filter:opacity(100%);
+  transition: filter 0.35s ease-in-out;
 }
 
 img:hover {
-  filter:opacity(0);
+  filter:opacity(15%);
   transition: filter 0.35s ease-in-out;
 }
