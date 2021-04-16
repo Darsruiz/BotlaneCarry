@@ -2,10 +2,10 @@
 Proyecto de ADC en ANGULAR
 # TO DO: 
 
-Imagenes skins campeones: La idea es que las casillas se anumeren y como tendremos 2 arrays, uno para skins y otro para campeones podriamos modificarlo mucho mas facil al final.
+Imagenes skins campeones: La idea es que las casillas se anumeren y como tendremos 2 arrays, uno para skins y otro para campeones podriamos modificarlo mucho mas facil al final. LISTO
 Array con TODOS los nombres de los campeones que pondremos
 Array con TODAS los numeros de skins: ex: swain 5 skins main.component.ts (ni idea como implementar eso todavia)
-Igualmente con los nombres, no escribiriamos 'tristana' en el main.html sino nombres[1]
+Igualmente con los nombres, no escribiriamos 'tristana' en el main.html sino nombres[1] LISTO
 
 Habilidades, Ratios, Dano, Enfriamiento, todo en variables y constantes, ex teemo: console.log(`Con nivel de Q: ${Qlvl+1} y AP: ${ap} el dano es: ${totalDamage}, y la duracion del blind es: ${blindDuration[Qlvl]}`);
 

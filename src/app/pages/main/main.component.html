@@ -1,6 +1,6 @@
 <mat-grid-list #grid cols="3" fxLayout="row" fxLayoutAlign="space-between" rowHeight="16:9">
   <mat-grid-tile *ngFor="let row of nombres; let i = index">
-    <img [src]="skinscampeones(i)" alt="Primer Campeon" [routerLink]="['/champion']">
-    <mat-grid-tile-footer>{{ nombrecampeones(i) }}</mat-grid-tile-footer>
+    <img [src]="skinsCampeones(i)" alt="Primer Campeon" [routerLink]="['/champion']">
+    <mat-grid-tile-footer>{{ nombreCampeones(i) }}</mat-grid-tile-footer>
   </mat-grid-tile>
 </mat-grid-list>

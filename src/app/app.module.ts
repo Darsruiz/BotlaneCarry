@@ -15,6 +15,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { ChampionComponent } from './pages/champion/champion.component';
+import { FuncionesCompartidasService } from './services/funciones-compartidas.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { ChampionComponent } from './pages/champion/champion.component';
     MatIconModule,
     MatButtonModule,
   ],
-  providers: [],
+  providers: [FuncionesCompartidasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
