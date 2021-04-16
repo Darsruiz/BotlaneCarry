@@ -1,5 +1,25 @@
-<div class="background">
+<img [src]="skinsCampeones(1)" alt="Primer Campeon" >
 
+<div class="imagen-centrada-redonda">
+  <div>
+    <img class="img-centered-round" [src]="skinsCampeones(1)" alt="Imagen Rounded">
+    <h2>
+      {{nombreCampeones(1)}}
+    </h2>
+  </div>
 </div>
 
-<img [src]="skinsCampeones(0)" alt="Primer Campeon">
+<div>
+  <mat-grid-list class="seccions" cols="3" rowHeight="50px">
+    <mat-grid-tile>
+      Habilidades
+    </mat-grid-tile>
+    <mat-grid-tile>
+      Historia
+    </mat-grid-tile>
+    <mat-grid-tile>
+      Skins
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+

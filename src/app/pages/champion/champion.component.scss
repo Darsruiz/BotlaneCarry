@@ -1,4 +1,50 @@
-.background {
-  background-color: gray;
-  height: 300px;
+
+  img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+.imagen-centrada-redonda {
+
+  display: flex;
+  flex-direction:  row;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  margin-top: -20px;
+  padding-bottom: 50px;
+  background-color: #2979ff;
+
+  div {
+    justify-content: center;
+    align-content: center;
+    .img-centered-round {
+      height: 150px;
+      width: 150px;
+      border-radius: 100%;
+      border: 5px solid white;
+      margin-top: -70px;
+    }
+    h2 {
+      margin-top: 20px;
+      font-size: 4rem;
+      text-align: center;
+      color: #212121;
+
+    }
+  }
+}
+
+.seccions {
+  margin-top: -30px;
+  background-color: #004ecb;
+  mat-grid-tile {
+    background-color: #004ecb;
+    transition: background-color 0.35s ease-in-out;
+  }
+  mat-grid-tile:hover {
+    background-color: #e0f2f1;
+    transition: background-color 0.35s ease-in-out;
+  }
 }

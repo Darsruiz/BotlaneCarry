@@ -13,10 +13,13 @@ export class ChampionComponent implements OnInit {
 
   constructor(private util:FuncionesCompartidasService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  skinsCampeones (i) {
+    return this.util.skinsCampeones(i);
   }
 
-  skinsCampeones(position) {
-    this.skinsCampeones(position)
+    nombreCampeones(i) {
+      return this.util.nombreCampeones(i);
+    }
   }
-}
