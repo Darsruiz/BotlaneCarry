@@ -3,10 +3,21 @@
 }
 
 .toolbar {
-  position: fixed;
   z-index: 1000;
+  width: 100%;
+  background-color: rgb(67, 67, 67);
+  transition: background-color 0.35s ease-in-out;
+  mat-grid-tile {
+    background-color: rgb(67, 67, 67);
+    transition: background-color 0.35s ease-in-out;
+  }
+  mat-grid-tile:hover {
+    background-color: white;
+    transition: background-color 0.35s ease-in-out;
+  }
 }
 
 .toolbar-hidden {
   visibility: hidden;
 }
+

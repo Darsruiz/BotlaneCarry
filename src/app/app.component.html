@@ -1,17 +1,19 @@
-<mat-toolbar class="toolbar">
-   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>My App</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-   <mat-icon>share</mat-icon>
- </button>
-</mat-toolbar>
 
-<mat-toolbar class="toolbar-hidden">
-</mat-toolbar>
+  <mat-grid-list class="toolbar" cols="5" rowHeight="16:9">
+    <mat-grid-tile>
+      <img src="../assets/lanes/top.webp" alt="Top">
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <img src="../assets/lanes/jungle.webp" alt="Jungle">
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <img src="../assets/lanes/mid.webp" alt="Mid">
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <img src="../assets/lanes/bot.webp" alt="Bot">
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <img src="../assets/lanes/support.webp" alt="Support">
+    </mat-grid-tile>
+  </mat-grid-list>
 <router-outlet></router-outlet>

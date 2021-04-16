@@ -1,6 +1,6 @@
 import { AfterContentInit, Component, OnInit, ViewChild } from '@angular/core';
 
-import { MediaChange, ObservableMedia } from '@angular/flex-layout';
+// import { MediaChange, ObservableMedia } from '@angular/flex-layout';
 import { MatGridList } from '@angular/material/grid-list';
 @Component({
   selector: 'app-main',
@@ -9,40 +9,39 @@ import { MatGridList } from '@angular/material/grid-list';
 })
 export class MainComponent implements OnInit {
 
+  nombres = ['Kindred', 'Swain', 'Varus', 'Ziggs','Ezreal','Vayne','Ashe','Corki','Samira','Ashe','Ezreal','Vayne','Ashe','Ezreal','Vayne','Ashe'];
+  skin = [1,2,3,1,2,3];
+  // 'Kindred', 'Swain', 'Varus', 'Ziggs',
   constructor() { }
 
-  skinscampeones() {
 
-    let nombres = ['Ezreal','Vayne','Ashe'];
-    let skin = [1,2,3];
-
-    //https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Samira_0.jpg
-    //console.log('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/'+nombres[1]+'_'+skin[1]+'.jpg');
-    console.log(`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${nombres[1]}_${skin[1]}.jpg`);
+  skinscampeones(position) {
+    return(`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.nombres[position]}_${this.skin[0]}.jpg`);
   }
 
-
-  ngOnInit(): void {
+  nombrecampeones(position) {
+    return(`${this.nombres[position]}`);
   }
+  ngOnInit(): void {}
 
 }
 
-export class GridComponent implements AfterContentInit {
-  @ViewChild('grid') grid: MatGridList;
+// export class GridComponent implements AfterContentInit {
+//   @ViewChild('grid') grid: MatGridList;
 
-  gridByBreakpoint = {
-    xl: 8,
-    lg: 6,
-    md: 4,
-    sm: 2,
-    xs: 1
-  }
+//   gridByBreakpoint = {
+//     xl: 8,
+//     lg: 6,
+//     md: 4,
+//     sm: 2,
+//     xs: 1
+//   }
 
-  constructor(private observableMedia: ObservableMedia) {}
+//   constructor(private observableMedia: ObservableMedia) {}
 
-  ngAfterContentInit() {
-    this.observableMedia.asObservable().subscribe((change: MediaChange) => {
-      this.grid.cols = this.gridByBreakpoint[change.mqAlias];
-    });
-  }
-}
+//   ngAfterContentInit() {
+//     this.observableMedia.asObservable().subscribe((change: MediaChange) => {
+//       this.grid.cols = this.gridByBreakpoint[change.mqAlias];
+//     });
+//   }
+// }
