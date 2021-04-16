@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './pages/main/main.component';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 // Material
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import { ChampionComponent } from './pages/champion/champion.component'; 
+import { ChampionComponent } from './pages/champion/champion.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { ChampionComponent } from './pages/champion/champion.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     MatToolbarModule, // Material
     MatGridListModule,
     MatIconModule,
