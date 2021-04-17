@@ -5,10 +5,10 @@
 .toolbar {
   z-index: 1000;
   width: 100%;
-  background-color: #212121;
+  background-color: #424242;
   transition: background-color 0.35s ease-in-out;
   mat-grid-tile {
-    background-color: #212121;
+    background-color: #424242;
     transition: background-color 0.35s ease-in-out;
   }
   mat-grid-tile:hover {
@@ -25,3 +25,22 @@
   visibility: hidden;
 }
 
+.barra-negra {
+  display: flex;
+  justify-content: space-between;
+  color: aliceblue;
+  background-color: #212121;
+  height: 4%;
+  button {
+    background-color: #1b1b1b;
+    margin: 0;
+    border-radius: 0;
+    mat-icon {
+      margin-bottom: 7px;
+    }
+  }
+  h2 {
+    text-align: center;
+    font-size: 19px;
+  }
+}
