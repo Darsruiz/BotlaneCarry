@@ -12,6 +12,10 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'main',
+    component: MainComponent,
+  },
+  {
     path: 'champion',
     component: ChampionComponent
   },

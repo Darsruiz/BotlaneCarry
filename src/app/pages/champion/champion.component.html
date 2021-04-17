@@ -11,22 +11,32 @@
 
 <div>
   <mat-grid-list class="seccions" cols="3" rowHeight="50px">
-    <mat-grid-tile>
-      Habilidades
-    </mat-grid-tile>
-    <mat-grid-tile>
-      Historia
-    </mat-grid-tile>
-    <mat-grid-tile>
-      Skins
-    </mat-grid-tile>
+    <button (click)='myFunction()'>
+      <mat-grid-tile>
+        Habilidades
+      </mat-grid-tile>
+    </button>
+    <button (click)='myFunction3()'>
+      <mat-grid-tile>
+        Historia
+      </mat-grid-tile>
+    </button>
+    <button (click)='myFunction2()'>
+      <mat-grid-tile>
+        Skins
+      </mat-grid-tile>
+    </button>
   </mat-grid-list>
 </div>
 
-<mat-grid-list cols="3" rowHeight="405:239">
-  <mat-grid-tile *ngFor="let row of skin; let i = index">
-    <img [src]="skinCampeon(i)" alt="Skin Campeon">
-  </mat-grid-tile>
-</mat-grid-list>
+  <mat-grid-list cols="3" rowHeight="405:239" id="skins">
+    <mat-grid-tile *ngFor="let row of skin; let i = index">
+      <img [src]="skinCampeon(i)" alt="Skin Campeon">
+    </mat-grid-tile>
+  </mat-grid-list>
 
 <!-- [default]="skinCampeon(1)" -->
+
+<p id="escondido">probando</p>
+
+<p id="historia">holaa</p>
