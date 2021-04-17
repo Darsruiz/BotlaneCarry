@@ -1,5 +1,5 @@
 # BotlaneCarry
-Proyecto de ADC en ANGULAR hola buenas tardes
+Proyecto de ADC en ANGULAR hola buenas tardes, soy pedrín, k tal?
 # TO DO: 
 
 Imagenes skins campeones: La idea es que las casillas se anumeren y como tendremos 2 arrays, uno para skins y otro para campeones podriamos modificarlo mucho mas facil al final. LISTO
