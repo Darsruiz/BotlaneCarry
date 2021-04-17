@@ -23,3 +23,10 @@
   </mat-grid-list>
 </div>
 
+<mat-grid-list cols="3" rowHeight="405:239">
+  <mat-grid-tile *ngFor="let row of skin; let i = index">
+    <img [src]="skinCampeon(i)" alt="Skin Campeon">
+  </mat-grid-tile>
+</mat-grid-list>
+
+<!-- [default]="skinCampeon(1)" -->

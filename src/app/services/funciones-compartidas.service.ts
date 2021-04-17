@@ -18,4 +18,15 @@ export class FuncionesCompartidasService {
   nombreCampeones(i) {
     return this.nombres[i]
   }
+
+  skinCampeon(i) {
+    //hacer lo mismo que return pero con el nombre estatico
+    if  (true) {
+      // if es una imagen = go
+      return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.nombres[1]}_${this.skin[1]}.jpg`
+    } // else omitir
+    else {
+      return false
+    }
+  }
 }

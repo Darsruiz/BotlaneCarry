@@ -22,4 +22,8 @@ export class ChampionComponent implements OnInit {
     nombreCampeones(i) {
       return this.util.nombreCampeones(i);
     }
+  
+  skinCampeon(i) {
+    return this.util.skinCampeon(i);
+  }
   }
