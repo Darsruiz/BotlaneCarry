@@ -2,8 +2,8 @@ export class nombreSkins {
 
   public static nombres = ['Kindred', 'Swain', 'Varus', 'Ziggs','Ezreal','Vayne','Ashe','Corki','Samira','Caitlyn','Twitch','Vayne','Ashe','Ezreal','Vayne','Ashe'];
 
-  public static nombresTop = ['Top'];
-  public static nombresJungle = ['Jungle'];
+  public static nombresTop = ['Garen','Darius'];
+  public static nombresJungle = ['Kindred'];
   public static nombresMid = ['Mid'];
   public static nombresAdc = ['Adc'];
   public static nombresSupport = ['Support'];

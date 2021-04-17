@@ -23,7 +23,7 @@ export class FuncionesCompartidasService {
     //hacer lo mismo que return pero con el nombre estatico
     if  (true) {
       // if es una imagen = go
-      return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.nombres[1]}_${this.skin[1]}.jpg`
+      return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.nombres[1]}_${this.skin[i]}.jpg`
     } // else omitir
     else {
       return false
