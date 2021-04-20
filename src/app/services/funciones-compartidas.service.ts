@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { nombreSkins } from '../../assets/nombreSkins';
 
 @Injectable({
@@ -8,25 +9,24 @@ export class FuncionesCompartidasService {
 
   nombres = nombreSkins.nombres
   skin = nombreSkins.skin
+  campeon: any;
+  i: Number;
 
   constructor() { }
 
-  skinsCampeones(i) {
-    return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.nombres[i]}_${this.skin[0]}.jpg`
+  imagenPrincipal(campeon) {
+    return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${campeon}_${this.skin[0]}.jpg`
+  }
+  skinsCampeones(campeon) {
+      return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.campeon}_${this.skin[0]}.jpg`
   }
 
   nombreCampeones(i) {
     return this.nombres[i]
   }
 
-  skinCampeon(i) {
-    //hacer lo mismo que return pero con el nombre estatico
-    if  (true) {
-      // if es una imagen = go
-      return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.nombres[1]}_${this.skin[i]}.jpg`
-    } // else omitir
-    else {
-      return false
-    }
+
+  skins(campeon: string, i: number) {
+    return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${i}_${campeon}.jpg`
   }
 }

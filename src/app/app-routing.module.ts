@@ -16,7 +16,7 @@ const routes: Routes = [
     component: MainComponent,
   },
   {
-    path: 'champion',
+    path: 'champion/:id',
     component: ChampionComponent
   },
   // { //si el path es cualquier cosa que no esta listado arriba ^ llevara a listado

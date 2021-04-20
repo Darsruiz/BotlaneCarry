@@ -12,7 +12,13 @@ n no me gusta angular
 
 4. hacer que click en top mid jg cambie a el ARRAY respectivo
 
-5. Array con TODAS los numeros de skins: ex: swain 5 skins main.component.ts (ni idea como implementar eso todavia)
+5. Array con TODAS los numeros de skins: ex: swain 5 skins main.component.ts (ni idea como implementar eso todavia) 
+
+5.1. Definir objeto para skins, osea,  {
+  nombre: swain
+  skins: 7
+  numero skins: 1 2 3 4 5 6 7 11 (segun el url)
+}
 
 6. estructura pagina web campeones: Mi plan es hacer una sola estructura y que los valores e imagenes se llenen a partir del array nombre que tenemos, es decir: si presiono a swain o a ezreal, en vez de hacer una pagina para cada uno (paginaweb/ezreal , paginaweb/swain) lo que haria seria: paginaweb/campeon y los datos se le pasarian a traves de un ?child? 
 

@@ -1,30 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { nombreSkins } from '../../../assets/nombreSkins';
 import { FuncionesCompartidasService } from 'src/app/services/funciones-compartidas.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-champion',
   templateUrl: './champion.component.html',
   styleUrls: ['./champion.component.scss']
 })
+
 export class ChampionComponent implements OnInit {
 
   nombres = nombreSkins.nombres
   skin = nombreSkins.skin
+  campeon;
+  i;
 
-  constructor(private util:FuncionesCompartidasService) { }
 
-  ngOnInit(): void {}
+  constructor(private util:FuncionesCompartidasService, private router: Router) { }
 
-  skinsCampeones (i) {
-    return this.util.skinsCampeones(i);
+  ngOnInit(): void {
+    this.campeon = this.router.url.split('/')[2];
+    console.log((this.campeon));
   }
 
-    nombreCampeones(i) {
-      return this.util.nombreCampeones(i);
-    }
+  imagenPrincipal (campeon) {
+    return this.util.imagenPrincipal(campeon)
+  }
 
-  skinCampeon(i) {
-    return this.util.skinCampeon(i);
+  skins(i, campeon) {
+    return this.util.skins(i, campeon);
   }
 
   myFunction() {
@@ -72,3 +76,7 @@ export class ChampionComponent implements OnInit {
     }
   }
 }
+function i(i: any) {
+  throw new Error('Function not implemented.');
+}
+
