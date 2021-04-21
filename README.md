@@ -3,16 +3,11 @@ Proyecto de ADC en ANGULAR hola buenas tardes, soy pedrín, k tal? bien y vosotr
 n no me gusta angular
 
 # TO DO: 
-
-0. restart grid cuando cambie de link!!!
-
 1. Arrays con TODOS los nombres de los campeones que pondremos
 
-2. desglosar y ocultar secciones: Habilidades Historia Skins
+2. desglosar y ocultar secciones: Habilidades Historia Skins (mejorar)
 
 3. hacer que la seccion skins oculte las skins que el link falla
-
-4. hacer que click en top mid jg cambie a el ARRAY respectivo
 
 5. Array con TODAS los numeros de skins: ex: swain 5 skins main.component.ts (ni idea como implementar eso todavia) 
 
@@ -32,6 +27,14 @@ seria asi: Con nivel de Q: 3 y AP: 100 el dano es: 150, y la duracion del blind 
 
 # LISTO:
 
-Imagenes skins campeones: La idea es que las casillas se anumeren y como tendremos 2 arrays, uno para skins y otro para campeones podriamos modificarlo mucho mas facil al final. LISTO
+Imagenes skins campeones: La idea es que las casillas se anumeren y como tendremos 2 arrays, uno para skins y otro para campeones podriamos modificarlo mucho mas facil al final.
 
-Igualmente con los nombres, no escribiriamos 'tristana' en el main.html sino nombres[1] LISTO
+Igualmente con los nombres, no escribiriamos 'tristana' en el main.html sino nombres[1]
+
+0. restart grid cuando cambie de link!!!
+
+4. hacer que click en top mid jg cambie a el ARRAY respectivo
+
+# remember
+
+OutputPath en el angular.json para cuando implemento firebase

@@ -33,6 +33,10 @@ export class MainComponent implements OnInit {
     //this.idProducto = this.router.url.split('/')[2];
   }
 
+  resetLineaLink() {
+    this.lineaLink = this.router.url.split('/')[2];
+    console.log('linealink:', this.lineaLink);
+  }
   skinsCampeones (i) {
     return this.util.skinsCampeones(i);
   }
