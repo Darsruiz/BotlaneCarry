@@ -21,6 +21,10 @@ export class ChampionComponent implements OnInit {
   ngOnInit(): void {
     this.campeon = this.router.url.split('/')[2];
     console.log((this.campeon));
+
+    document.getElementById("historia")!.style.display = "none";
+    document.getElementById("skins")!.style.display = "none";
+    document.getElementById("habilidades")!.style.display = "none";
   }
 
   imagenPrincipal (campeon) {
@@ -31,8 +35,46 @@ export class ChampionComponent implements OnInit {
     return this.util.skins(i, campeon);
   }
 
+  show(element) {
+    document.getElementById('habilidades')!.style.display = "none";
+    document.getElementById('historia')!.style.display = "none";
+    document.getElementById('skins')!.style.display = "none";
+
+    document.getElementById(element)!.style.display = "block";
+    console.log(element);
+  }
+
+  esconderMostrar() {
+    let habilidades;
+    let skins;
+    let historia;
+    let show;
+
+    switch (true) {
+      case (true):
+              console.log('case true', habilidades, skins, historia);
+              habilidades = "block";
+              skins = "none";
+              historia = "none";
+        break;
+
+      case (true):
+              console.log('case 2', habilidades, skins, historia);
+              habilidades = "none";
+              skins = "block";
+              historia = "none";
+        break;
+
+      default:
+              console.log('default',habilidades, skins, historia);
+              habilidades = "none";
+              skins = "none";
+              historia = "block";
+        break;
+    }
+  }
   myFunction() {
-    var escondido = document.getElementById("escondido");
+    var escondido = document.getElementById("habilidades");
     var skins=document.getElementById('skins');
     var historia=document.getElementById('historia');
 

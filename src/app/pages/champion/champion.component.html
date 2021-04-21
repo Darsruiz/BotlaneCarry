@@ -10,19 +10,22 @@
 </div>
 
 <div>
+  switch
+</div>
+<div>
   <mat-grid-list class="seccions" cols="3" rowHeight="50px">
     <mat-grid-tile>
-      <button mat-flat-button (click)='myFunction()'>
+      <button mat-flat-button (click)="show('habilidades')">
         Habilidades
       </button>
     </mat-grid-tile>
     <mat-grid-tile>
-      <button mat-flat-button (click)='myFunction3()'>
+      <button mat-flat-button (click)="show('historia')">
         Historia
       </button>
     </mat-grid-tile>
     <mat-grid-tile>
-      <button mat-flat-button (click)='myFunction2()'>
+      <button mat-flat-button (click)="show('skins')">
         Skins
       </button>
     </mat-grid-tile>
@@ -37,6 +40,9 @@
 
 <!-- [default]="skinCampeon(1)" -->
 
-<p id="escondido">probando</p>
-
-<p id="historia">holaa</p>
+<p id="habilidades" class="habilidades">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur similique voluptates laboriosam, ipsam vel odio aspernatur perspiciatis ex fugit doloribus debitis minima officiis esse nisi id, aliquid omnis in rem.
+</p>
+<p id="historia" class="historia">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur similique voluptates laboriosam, ipsam vel odio aspernatur perspiciatis ex fugit doloribus debitis minima officiis esse nisi id, aliquid omnis in rem.
+</p>
