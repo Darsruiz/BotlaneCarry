@@ -4,6 +4,8 @@ n no me gusta angular
 
 # TO DO: 
 
+0. restart grid cuando cambie de link!!!
+
 1. Arrays con TODOS los nombres de los campeones que pondremos
 
 2. desglosar y ocultar secciones: Habilidades Historia Skins

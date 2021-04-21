@@ -42,6 +42,7 @@ export class MainComponent implements OnInit {
     }
 
   navegar(i) {
+
       this.router.navigate(['champion', i])
     }
 

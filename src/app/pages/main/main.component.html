@@ -1,6 +1,6 @@
 <mat-grid-list #grid cols="3" fxLayout="row" fxLayoutAlign="space-between" rowHeight="16:9">
-  <mat-grid-tile (click)=navegar(row) *ngFor="let row of nombres; let i = index"  >
-    <img [src]="seleccionLineas(lineaLink, i)" alt="Primer Campeon">
+  <mat-grid-tile *ngFor="let row of nombres; let i = index"  >
+    <img [src]="seleccionLineas(lineaLink, i)" [routerLink]="['/champion', nombreCampeonLinea]" alt="Primer Campeon">
     <mat-grid-tile-footer>{{ nombreCampeonLinea }}</mat-grid-tile-footer>
   </mat-grid-tile>
 </mat-grid-list>
