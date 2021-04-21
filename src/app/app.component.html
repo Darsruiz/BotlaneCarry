@@ -4,20 +4,30 @@
   <button mat-flat-button [routerLink]="['']" ><mat-icon>share</mat-icon></button>
 </div>
   <mat-grid-list class="toolbar" cols="5" rowHeight="60px">
-    <mat-grid-tile [routerLink]="['/main/Top']">
-      <img src="../assets/lanes/top.webp" alt="Top">
+    <mat-grid-tile>
+      <button mat-flat-button [routerLink]="['/main/Top']">
+        <img src="../assets/lanes/top.png" alt="Top">
+      </button>
     </mat-grid-tile>
-    <mat-grid-tile [routerLink]="['/main/Jungle']">
-      <img src="../assets/lanes/jungle.webp" alt="Jungle">
+    <mat-grid-tile>
+    <button mat-flat-button [routerLink]="['/main/Jungle']">
+      <img src="../assets/lanes/jungle.png" alt="Jungle">
+    </button>
     </mat-grid-tile>
-    <mat-grid-tile [routerLink]="['/main/Mid']">
-      <img src="../assets/lanes/mid.webp" alt="Mid">
+    <mat-grid-tile>
+      <button mat-flat-button [routerLink]="['/main/Mid']">
+        <img src="../assets/lanes/mid.png" alt="Mid">
+      </button>
     </mat-grid-tile>
-    <mat-grid-tile [routerLink]="['/main/Adc']">
-      <img src="../assets/lanes/bot.webp" alt="Bot">
+    <mat-grid-tile>
+      <button mat-flat-button [routerLink]="['/main/Adc']">
+      <img src="../assets/lanes/bot.png" alt="Bot">
+    </button>
     </mat-grid-tile>
-    <mat-grid-tile [routerLink]="['/main/Support']">
-      <img src="../assets/lanes/support.webp" alt="Support">
+    <mat-grid-tile>
+      <button mat-flat-button [routerLink]="['/main/Support']">
+      <img src="../assets/lanes/support.png" alt="Support">
+    </button>
     </mat-grid-tile>
   </mat-grid-list>
 

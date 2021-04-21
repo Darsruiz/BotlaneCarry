@@ -42,11 +42,22 @@
   mat-grid-tile {
     background-color: #004ecb;
     transition: background-color 0.35s ease-in-out;
-  }
-  mat-grid-tile:hover {
-    background-color: #e0f2f1;
+  :hover {
+    background-color: #719ff5;
     transition: background-color 0.35s ease-in-out;
   }
+  button {
+    background-color: #004ecb;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    :hover {
+      background-color: #719ff5;
+    transition: background-color 0.35s ease-in-out;
+    }
+  }
+  }
+
 }
 
 #escondido{
