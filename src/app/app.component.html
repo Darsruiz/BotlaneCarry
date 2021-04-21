@@ -4,19 +4,19 @@
   <button mat-flat-button [routerLink]="['']" ><mat-icon>share</mat-icon></button>
 </div>
   <mat-grid-list class="toolbar" cols="5" rowHeight="60px">
-    <mat-grid-tile>
+    <mat-grid-tile (click)="navegarLineas(0)">
       <img src="../assets/lanes/top.webp" alt="Top">
     </mat-grid-tile>
-    <mat-grid-tile>
+    <mat-grid-tile (click)="navegarLineas(1)">
       <img src="../assets/lanes/jungle.webp" alt="Jungle">
     </mat-grid-tile>
-    <mat-grid-tile>
+    <mat-grid-tile (click)="navegarLineas(2)">
       <img src="../assets/lanes/mid.webp" alt="Mid">
     </mat-grid-tile>
-    <mat-grid-tile>
+    <mat-grid-tile (click)="navegarLineas(3)">
       <img src="../assets/lanes/bot.webp" alt="Bot">
     </mat-grid-tile>
-    <mat-grid-tile>
+    <mat-grid-tile (click)="navegarLineas(4)">
       <img src="../assets/lanes/support.webp" alt="Support">
     </mat-grid-tile>
   </mat-grid-list>

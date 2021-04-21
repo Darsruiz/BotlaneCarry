@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'main',
+    path: 'main/:id',
     component: MainComponent,
   },
   {
