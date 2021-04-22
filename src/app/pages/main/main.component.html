@@ -1,6 +1,13 @@
-<mat-grid-list #grid cols="3" fxLayout="row" fxLayoutAlign="space-between" rowHeight="16:9">
-  <mat-grid-tile *ngFor="resetLineaLink(); let row of Top let i = index"  >
+<mat-grid-list class="grande" (resized)="onResized($event)" cols="3" rowHeight="16:9">
+  <mat-grid-tile *ngFor="resetLineaLink(); let row of Top; let i = index"  >
     <img [src]="seleccionLineas(lineaLink, i)" [routerLink]="['/champion', nombreCampeonLinea]" alt="Primer Campeon">
+    <mat-grid-tile-footer>{{ nombreCampeonLinea }}</mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list class="pequeno" (resized)="onResized($event)" cols="4" rowHeight="1:1">
+  <mat-grid-tile *ngFor="resetLineaLink(); let row of Top; let i = index"  >
+    <img [src]="miniaturas(lineaLink, i)" [routerLink]="['/champion', nombreCampeonLinea]" alt="Primer Campeon">
     <mat-grid-tile-footer>{{ nombreCampeonLinea }}</mat-grid-tile-footer>
   </mat-grid-tile>
 </mat-grid-list>

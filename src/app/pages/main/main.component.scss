@@ -1,4 +1,4 @@
-mat-grid-tile {
+.grande {
   // background: lightblue;
   mat-grid-tile-footer {
     background-color: rgb(26, 26, 26);
@@ -15,6 +15,18 @@ mat-grid-tile {
   }
 }
 
+.pequeno {
+  background-color: rgb(26, 26, 26);
+  mat-grid-tile {
+    mat-grid-tile-footer {
+    display: flex;
+    justify-content: center;
+    font-size: 100%;
+  }
+  }
+
+}
+
 img {
   z-index: 1;
   max-width:100%;
@@ -25,4 +37,25 @@ img {
 img:hover {
   filter:opacity(15%);
   transition: filter 0.35s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .pequeno {
+    display: block;
+    mat-grid-tile {
+      img {
+        width: 100%;
+      }
+      mat-grid-tile-footer {
+        background-color: rgba(255, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      font-size: 100%;
+    }
+    }
+  }
+  .grande {
+    display: none;
+  }
 }

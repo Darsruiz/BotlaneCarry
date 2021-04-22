@@ -2,6 +2,9 @@ import { Component, OnInit} from '@angular/core';
 import { nombreSkins } from "../../../assets/nombreSkins";
 import { FuncionesCompartidasService } from 'src/app/services/funciones-compartidas.service';
 import { Router } from '@angular/router';
+
+// Import the resized event model
+import { ResizedEvent } from 'angular-resize-event';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -17,15 +20,17 @@ export class MainComponent implements OnInit {
   Adc = nombreSkins.Adc
   Support = nombreSkins.Support
   Lineas = nombreSkins.Lineas
-  lineaLink;
-  nombreCampeonLinea;
+  lineaLink: string;
+  nombreCampeonLinea: string;
+  width: number;
+  height: number;
 
 
   constructor(private util:FuncionesCompartidasService, private router: Router) { }
 
   ngOnInit(): void {
     this.lineaLink = this.router.url.split('/')[2];
-    console.log('linealink:', this.lineaLink);
+    // console.log('linealink:', this.lineaLink);
     // obtenes la ruta.
     //console.log('ruta,', this.router.url);
     // partimos la ruta y obtenemos la id del producto
@@ -33,9 +38,14 @@ export class MainComponent implements OnInit {
     //this.idProducto = this.router.url.split('/')[2];
   }
 
+  onResized(event: ResizedEvent) {
+    this.width = event.newWidth;
+    this.height = event.newHeight;
+  }
+
   resetLineaLink() {
     this.lineaLink = this.router.url.split('/')[2];
-    console.log('linealink:', this.lineaLink);
+    // console.log('linealink:', this.lineaLink);
   }
   skinsCampeones (i) {
     return this.util.skinsCampeones(i);
@@ -53,12 +63,12 @@ export class MainComponent implements OnInit {
   seleccionLineas (lineaLink: string, i: number) {
     switch (lineaLink) {
       case ('Top'):
-        console.log('ha elegido el camino del top');
+        //console.log('ha elegido el camino del top');
         this.nombreCampeonLinea = this.Top[i]
         return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.Top[i]}_${this.skin[0]}.jpg`
 
       case ('Jungle'):
-        console.log('ha elegido el camino del jg');
+        //console.log('ha elegido el camino del jg');
         this.nombreCampeonLinea = this.Jungle[i]
         return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.Jungle[i]}_${this.skin[0]}.jpg`
 
@@ -75,12 +85,43 @@ export class MainComponent implements OnInit {
         return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.Support[i]}_${this.skin[0]}.jpg`
 
       default:
-        console.log('ha elegido el camino del default', lineaLink);
+        // console.log('ha elegido el camino del default', lineaLink);
         this.nombreCampeonLinea = this.nombres[i]
         return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.nombres[i]}_${this.skin[0]}.jpg`
     }
   }
 
+  miniaturas(lineaLink: string, i: number) {
+    switch (lineaLink) {
+      case ('Top'):
+        //console.log('ha elegido el camino del top');
+        //http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/Aatrox.png
+        this.nombreCampeonLinea = this.Top[i]
+        return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.Top[i]}.png`
+
+      case ('Jungle'):
+        //console.log('ha elegido el camino del jg');
+        this.nombreCampeonLinea = this.Jungle[i]
+        return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.Jungle[i]}.png`
+
+      case ('Mid'):
+        this.nombreCampeonLinea = this.Mid[i]
+        return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.Mid[i]}.png`
+
+      case ('Adc'):
+        this.nombreCampeonLinea = this.Adc[i]
+        return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.Adc[i]}.png`
+
+      case ('Support'):
+        this.nombreCampeonLinea = this.Support[i]
+        return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.Support[i]}.png`
+
+      default:
+        // console.log('ha elegido el camino del default', lineaLink);
+        this.nombreCampeonLinea = this.nombres[i]
+        return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.nombres[i]}_${this.skin[0]}.jpg`
+    }
+  }
   seleccionCampeones (i: number) {
     return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.nombres[i]}_${this.skin[0]}.jpg`
   }

@@ -17,6 +17,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { ChampionComponent } from './pages/champion/champion.component';
 import { FuncionesCompartidasService } from './services/funciones-compartidas.service';
 
+import { AngularResizedEventModule } from 'angular-resize-event';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +34,9 @@ import { FuncionesCompartidasService } from './services/funciones-compartidas.se
     MatGridListModule,
     MatIconModule,
     MatButtonModule,
+
+    // Specify AngularResizedEventModule library as an import
+    AngularResizedEventModule
   ],
   providers: [FuncionesCompartidasService],
   bootstrap: [AppComponent]
