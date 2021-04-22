@@ -24,7 +24,7 @@ export class ChampionComponent implements OnInit {
 
     document.getElementById("historia")!.style.display = "none";
     document.getElementById("skins")!.style.display = "none";
-    document.getElementById("habilidades")!.style.display = "none";
+    document.getElementById("habilidades")!.style.display = "block";
   }
 
   imagenPrincipal (campeon) {
@@ -42,80 +42,6 @@ export class ChampionComponent implements OnInit {
 
     document.getElementById(element)!.style.display = "block";
     console.log(element);
-  }
-
-  esconderMostrar() {
-    let habilidades;
-    let skins;
-    let historia;
-    let show;
-
-    switch (true) {
-      case (true):
-              console.log('case true', habilidades, skins, historia);
-              habilidades = "block";
-              skins = "none";
-              historia = "none";
-        break;
-
-      case (true):
-              console.log('case 2', habilidades, skins, historia);
-              habilidades = "none";
-              skins = "block";
-              historia = "none";
-        break;
-
-      default:
-              console.log('default',habilidades, skins, historia);
-              habilidades = "none";
-              skins = "none";
-              historia = "block";
-        break;
-    }
-  }
-  myFunction() {
-    var escondido = document.getElementById("habilidades");
-    var skins=document.getElementById('skins');
-    var historia=document.getElementById('historia');
-
-    if (escondido.style.display === "block") {
-      escondido.style.display = "none";
-
-    } else {
-      escondido.style.display = "block";
-      skins.style.display='none';
-      historia.style.display='none';
-    }
-  }
-
-  myFunction2() {
-    var escondido = document.getElementById("escondido");
-    var skins=document.getElementById('skins');
-    var historia=document.getElementById('historia');
-
-    if (skins.style.display === "block") {
-      skins.style.display = "none";
-
-    } else {
-      skins.style.display = "block";
-      escondido.style.display='none';
-      historia.style.display='none';
-    }
-  }
-
-  myFunction3() {
-    var escondido = document.getElementById("escondido");
-    var skins=document.getElementById('skins');
-    var historia=document.getElementById('historia');
-
-    if (historia.style.display === "block") {
-      historia.style.display = "none";
-
-    } else {
-      historia.style.display = "block";
-      escondido.style.display='none';
-      skins.style.display='none';
-    }
   }
 }
 function i(i: any) {
