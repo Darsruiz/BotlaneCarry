@@ -31,6 +31,10 @@ export class ChampionComponent implements OnInit {
     return this.util.imagenPrincipal(campeon)
   }
 
+  imagenPequena (campeon) {
+    return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${campeon}.png`
+  }
+
   skins(i, campeon) {
     return this.util.skins(i, campeon);
   }
