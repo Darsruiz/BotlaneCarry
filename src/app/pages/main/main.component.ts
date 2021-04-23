@@ -20,24 +20,19 @@ export class MainComponent implements OnInit {
   Adc = nombreSkins.Adc
   Support = nombreSkins.Support
   Lineas = nombreSkins.Lineas
-  lineaLink = 'Mid';
-  nombreCampeonLinea = 'AurelionSol';
+  lineaLink: string;
   width: number;
   height: number;
-  nombreEspacios = 'AurelionSol';
+  nombreEspacios: string;
+  nameTemp: string;
 
 
   constructor(private util:FuncionesCompartidasService, private router: Router) { }
 
   ngOnInit(): void {
+    this.lineaLink = 'Mid'
     this.lineaLink = this.router.url.split('/')[2];
-    // console.log('linealink:', this.lineaLink);
-    // obtenes la ruta.
-    //console.log('ruta,', this.router.url);
-    // partimos la ruta y obtenemos la id del producto
-    // el split lo parte por donde esta la / y buscamos la parte "2" seria 3
-    //this.idProducto = this.router.url.split('/')[2];
-  }
+    }
 
   onResized(event: ResizedEvent) {
     this.width = event.newWidth;
@@ -48,16 +43,12 @@ export class MainComponent implements OnInit {
     this.lineaLink = this.router.url.split('/')[2];
     // console.log('linealink:', this.lineaLink);
   }
-  skinsCampeones (i) {
-    return this.util.skinsCampeones(i);
-  }
 
   nombreCampeones(i) {
       return this.util.nombreCampeones(i);
     }
 
   navegar(i) {
-
       this.router.navigate(['champion', i])
     }
 
@@ -65,82 +56,66 @@ export class MainComponent implements OnInit {
     switch (lineaLink) {
       case ('Top'):
         //console.log('ha elegido el camino del top');
-        this.nombreCampeonLinea = this.Top[i]
-        this.nombreEspacios = this.nombreCampeonLinea.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
+        this.nameTemp = this.Top[i]
         return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.Top[i]}_${this.skin[0]}.jpg`
 
       case ('Jungle'):
         //console.log('ha elegido el camino del jg');
-        this.nombreCampeonLinea = this.Jungle[i]
-        this.nombreEspacios = this.nombreCampeonLinea.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
+        this.nameTemp = this.Jungle[i]
         return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.Jungle[i]}_${this.skin[0]}.jpg`
 
       case ('Mid'):
-        this.nombreCampeonLinea = this.Mid[i]
-        this.nombreEspacios = this.nombreCampeonLinea.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
+        // this.nombreCampeonLinea = this.Mid[i]
+        this.nameTemp = this.Mid[i]
         return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.Mid[i]}_${this.skin[0]}.jpg`
 
       case ('Adc'):
-        this.nombreCampeonLinea = this.Adc[i]
-        this.nombreEspacios = this.nombreCampeonLinea.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
+        // this.nombreCampeonLinea = this.Adc[i]
+        this.nameTemp = this.Adc[i]
         return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.Adc[i]}_${this.skin[0]}.jpg`
 
       case ('Support'):
-        this.nombreCampeonLinea = this.Support[i]
-        this.nombreEspacios = this.nombreCampeonLinea.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
+        // this.nombreCampeonLinea = this.Support[i]
+        this.nameTemp = this.Support[i]
         return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.Support[i]}_${this.skin[0]}.jpg`
 
       default:
         // console.log('ha elegido el camino del default', lineaLink);
-        this.nombreCampeonLinea = this.nombres[i]
-        this.nombreEspacios = this.nombreCampeonLinea.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
-        return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.nombres[i]}_${this.skin[0]}.jpg`
+        this.nameTemp = this.Mid[i]
+        return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.Mid[i]}_${this.skin[0]}.jpg`
     }
   }
 
   miniaturas(lineaLink: string, i: number) {
     switch (lineaLink) {
       case ('Top'):
-        //console.log('ha elegido el camino del top');
-        //http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/Aatrox.png
-        this.nombreCampeonLinea = this.Top[i]
-        this.nombreEspacios = this.nombreCampeonLinea.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
+        this.nameTemp = this.Top[i]
         return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.Top[i]}.png`
 
       case ('Jungle'):
-        //console.log('ha elegido el camino del jg');
-        this.nombreCampeonLinea = this.Jungle[i]
-        this.nombreEspacios = this.nombreCampeonLinea.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
+        this.nameTemp = this.Jungle[i]
         return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.Jungle[i]}.png`
 
       case ('Mid'):
-        this.nombreCampeonLinea = this.Mid[i]
-        this.nombreEspacios = this.nombreCampeonLinea.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
+        this.nameTemp = this.Mid[i]
         return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.Mid[i]}.png`
 
       case ('Adc'):
-        this.nombreCampeonLinea = this.Adc[i]
-        this.nombreEspacios = this.nombreCampeonLinea.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
+        this.nameTemp = this.Adc[i]
         return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.Adc[i]}.png`
 
       case ('Support'):
-        this.nombreCampeonLinea = this.Support[i]
-        this.nombreEspacios = this.nombreCampeonLinea.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
+        this.nameTemp = this.Support[i]
         return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.Support[i]}.png`
 
       default:
         // console.log('ha elegido el camino del default', lineaLink);
-        this.nombreCampeonLinea = this.nombres[i]
-        this.nombreEspacios = this.nombreCampeonLinea.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
+        this.nameTemp = this.Mid[i].replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
         return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.nombres[i]}_${this.skin[0]}.jpg`
     }
   }
-  seleccionCampeones (i: number) {
-    return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.nombres[i]}_${this.skin[0]}.jpg`
-  }
 
-  unCamelCase(nombreCampeonLinea) {
-    this.nombreEspacios = this.nombreCampeonLinea.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
-    return this.nombreEspacios;
+  unCamelCase() {
+    return this.nameTemp.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
   }
   }

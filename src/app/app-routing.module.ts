@@ -8,12 +8,11 @@ const routes: Routes = [
     //pathMatch: 'full',
   {
     path: '',
-    component: MainComponent,
-    pathMatch: 'full',
+    component: MainComponent
   },
   {
     path: 'main/:id',
-    component: MainComponent,
+    component: MainComponent
   },
   {
     path: 'champion/:id',
