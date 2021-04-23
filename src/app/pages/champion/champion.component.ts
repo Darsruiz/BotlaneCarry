@@ -47,6 +47,9 @@ export class ChampionComponent implements OnInit {
     document.getElementById(element)!.style.display = "block";
     console.log(element);
   }
+  unCamelCase(campeon) {
+    return this.util.unCamelCase(campeon)
+  }
 }
 function i(i: any) {
   throw new Error('Function not implemented.');

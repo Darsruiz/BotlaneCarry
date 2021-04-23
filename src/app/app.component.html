@@ -1,7 +1,9 @@
 <div class="barra-negra">
   <button mat-flat-button [routerLink]="['/main/Mid']" ><mat-icon>home</mat-icon></button>
-  <h2>League of Legends</h2>
-  <button mat-flat-button [routerLink]="['']" ><mat-icon>search</mat-icon></button>
+  <button mat-flat-button [routerLink]="['/main/Mid']" >
+    <svg-icon src="../assets/svg/leagueIcon.svg" [svgStyle]="{ 'width.px':55 }"></svg-icon>
+  </button>
+  <button mat-flat-button (click)="searchDisplay()" ><mat-icon>{{showHide}}</mat-icon></button>
 </div>
   <mat-grid-list class="toolbar" cols="5" rowHeight="60px">
     <mat-grid-tile>
@@ -30,6 +32,12 @@
     </button>
     </mat-grid-tile>
   </mat-grid-list>
+
+  <form id="search" >
+    <mat-form-field>
+      <input matInput>
+    </mat-form-field>
+  </form>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="/__/firebase/8.4.1/firebase-app.js"></script>

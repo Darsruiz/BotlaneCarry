@@ -29,4 +29,9 @@ export class FuncionesCompartidasService {
   skins(campeon: string, i: number) {
     return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${i}_${campeon}.jpg`
   }
+
+  unCamelCase(campeon) {
+    campeon = campeon.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
+    return campeon;
+  }
 }

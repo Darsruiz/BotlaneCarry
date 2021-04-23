@@ -42,7 +42,7 @@ img {
   justify-content: space-between;
   color: aliceblue;
   background-color: #1b1b1b;
-  height: 5%;
+  height: 8%;
   button {
     background-color: #1b1b1b;
     margin: 0;
@@ -50,19 +50,28 @@ img {
     mat-icon {
       margin-bottom: 7px;
     }
+    svg-icon {
+      fill: aliceblue;
+    }
   }
-  h2 {
-    text-align: center;
-    font-size: 19px;
+}
+
+form {
+  display: none;
+  justify-content: center;
+  z-index: 1000;
+  background-color: #1b1b1b;
+  position: absolute;
+  top: 8%;
+  width: 100%;
+  input {
+    color: aliceblue;
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .barra-negra {
     height: 50px;
-    h2 {
-      margin-top: 6px;
-      font-size: 2rem;
-    }
   }
 }

@@ -5,6 +5,9 @@ import { nombreSkins } from '../assets/nombreSkins';
 // Import the resized event model
 import { ResizedEvent } from 'angular-resize-event';
 
+// icon
+import { AngularSvgIconModule } from 'angular-svg-icon';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -21,6 +24,7 @@ export class AppComponent{
   i;
   width: number;
   height: number;
+  showHide = "search"
 
   constructor(private router: Router) { }
 
@@ -39,4 +43,17 @@ export class AppComponent{
     this.router.navigate(['main',this.nombresLineas[i]]);
   }
 
+  searchDisplay() {
+    let search = document.getElementById('search').style.display
+
+    if (search == "none") {
+      this.showHide = "close"
+      document.getElementById('search')!.style.display = "flex";
+    }
+    else {
+      this.showHide = "search"
+      document.getElementById('search')!.style.display = "none";
+    }
+
+  }
 }
