@@ -1,0 +1,36 @@
+div {
+  // height: 82.5%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  h1 {
+    margin-top: 20%;
+    z-index: 1;
+    text-align: center;
+    color: aliceblue;
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  h2 {
+    z-index: 1;
+    color: rgb(255, 241, 241);
+    text-align: center;
+  }
+}
+
+.pequ {
+  display: flex;
+  align-content: center;
+  height: 30%;
+  width: 100%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    position:absolute;
+    bottom: 0;
+    top: 17.5%;
+    filter: blur(6px) brightness(80%);
+  }
+}

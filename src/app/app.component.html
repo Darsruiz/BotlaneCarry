@@ -1,6 +1,5 @@
 <div class="barra-negra">
-  <button mat-flat-button [routerLink]="['/main/Mid']" ><mat-icon>home</mat-icon></button>
-  <button mat-flat-button [routerLink]="['/main/Mid']" >
+  <button mat-flat-button [routerLink]="['']">
     <svg-icon src="../assets/svg/leagueIcon.svg" [svgStyle]="{ 'width.px':55 }"></svg-icon>
   </button>
   <button mat-flat-button (click)="searchDisplay()" ><mat-icon>{{showHide}}</mat-icon></button>
@@ -33,11 +32,19 @@
     </mat-grid-tile>
   </mat-grid-list>
 
+<div>
   <form id="search" >
     <mat-form-field>
-      <input matInput>
+      <input matInput (keyup)="filtrarArrays(Top, Jungle, Mid, Adc, Support)">
     </mat-form-field>
   </form>
+  <mat-grid-list id="results" class="pequeno" (resized)="onResized($event)" cols="4" rowHeight="1:1">
+    <mat-grid-tile *ngFor=" let row of searchResults; let i = index"  >
+      <img [src]="resultadoImg(i)" [routerLink]="['/champion',nameTemp]" value="Swain" >
+      <mat-grid-tile-footer>{{ unCamelCase() }}</mat-grid-tile-footer>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="/__/firebase/8.4.1/firebase-app.js"></script>

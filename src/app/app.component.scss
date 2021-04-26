@@ -56,6 +56,7 @@ img {
   }
 }
 
+
 form {
   display: none;
   justify-content: center;
@@ -68,6 +69,12 @@ form {
     color: aliceblue;
     width: 100%;
   }
+}
+#results {
+  position: absolute;
+  top: 16%;
+  z-index: 1000;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
