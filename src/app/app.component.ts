@@ -25,9 +25,6 @@ export class AppComponent{
   width: number;
   height: number;
   showHide = "search"
-  searchResults;
-  nameTemp;
-  arr = []
 
   constructor(private router: Router) { }
 
@@ -52,26 +49,11 @@ export class AppComponent{
     if (search == "none") {
       this.showHide = "close"
       document.getElementById('search')!.style.display = "flex";
-      document.getElementById('results')!.style.display = "flex";
     }
     else {
       this.showHide = "search"
       document.getElementById('search')!.style.display = "none";
-      document.getElementById('results')!.style.display = "none";
     }
 
-  }
-
-  filtrarArrays(Mid?, Top?, Jungle?, Adc?, Support?) {
-    let a
-    a = this.arr.concat(Top, Jungle, Mid, Adc, Support)
-    this.searchResults = a.filter('Swain')
-  }
-  resultadoImg(i) {
-    this.nameTemp
-    return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.searchResults[i]}.png`
-  }
-  unCamelCase() {
-    return this.nameTemp.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
   }
 }

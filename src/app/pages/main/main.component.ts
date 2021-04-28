@@ -25,7 +25,6 @@ export class MainComponent implements OnInit {
   height: number;
   nombreEspacios: string;
   nameTemp: string;
-  placeholderArray = [1,2,3,4,5,6,7,8,9,10]
 
 
   constructor(private util:FuncionesCompartidasService, private router: Router) { }

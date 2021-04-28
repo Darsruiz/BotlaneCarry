@@ -39,7 +39,7 @@ img:hover {
   transition: filter 0.35s ease-in-out;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .pequeno {
     display: block;
     mat-grid-tile {
@@ -56,12 +56,6 @@ img:hover {
     }
   }
   .grande {
-    display: none;
-  }
-}
-
-@media (min-width: 576px) {
-  .pequeno {
     display: none;
   }
 }
