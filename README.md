@@ -28,6 +28,6 @@ Igualmente con los nombres, no escribiriamos 'tristana' en el main.html sino nom
 6. estructura pagina web campeones: Mi plan es hacer una sola estructura y que los valores e imagenes se llenen a partir del array nombre que tenemos, es decir: si presiono a swain o a ezreal, en vez de hacer una pagina para cada uno (paginaweb/ezreal , paginaweb/swain) lo que haria seria: paginaweb/campeon y los datos se le pasarian a traves de un ?child? 
 
 2. desglosar y ocultar secciones: Habilidades Historia Skins (mejorar)
-# remember
+# Remember
 
 OutputPath en el angular.json para cuando implemento firebase
