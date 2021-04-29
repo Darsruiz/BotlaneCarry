@@ -58,8 +58,42 @@
 }
 
 #habilidades {
+  display: none;
   color: red
 }
 #historia {
-  color: rgb(255, 166, 0)
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  h2 {
+    font-size: 4rem;
+    text-align: center;
+    color: whitesmoke;
+    line-height: 4rem;
+    margin-top: 5%;
+  }
+  p {
+    font-size: 2rem;
+    text-align: center;
+    color: aliceblue;
+    line-height: 4rem;
+    margin: 5% 10%;
+  }
 }
+#skins {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .nombre {
+    color: red;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .foto-nombre {
+    color: red;
+    
+  }
+}
+
