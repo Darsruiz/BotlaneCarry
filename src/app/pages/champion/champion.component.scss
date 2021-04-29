@@ -33,6 +33,35 @@
   }
 }
 
+.imagen-centrada-pequena {
+  width: 100%;
+  margin-top: -20px;
+  padding-bottom: 50px;
+  background-color: #00338c;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    .img-centered-round {
+      height: 140px;
+      width: 140px;
+      border-radius: 100%;
+      border: 5px solid white;
+      margin-top: -70px;
+
+    }
+    h2 {
+      text-align: center;
+      margin-top: -30px;
+      font-size: 4rem;
+      color: #212121;
+      margin-top: 40px;
+      line-height: 4rem;
+    }
+  }
+}
 .seccions {
   margin-top: -30px;
   background-color: #004ecb;
@@ -85,15 +114,32 @@
   display: none;
 }
 
-@media (min-width: 576px) {
-  .nombre {
-    color: red;
-    font-size: 2rem;
-    line-height: 2rem;
-  }
-  .foto-nombre {
-    color: red;
-    
+.small {
+  *{
+    color: rgb(21, 255, 0);
+    background-color: rgb(51, 255, 0);
   }
 }
+
+.tiny {
+  *{
+    color: rgb(13, 0, 255);
+    background-color: rgb(4, 0, 255);
+  }
+}
+// @media (max-width: 576px) {
+//   *{
+//     color: red;
+//     background-color: red;
+//   }
+//   .nombre {
+//     color: red;
+//     font-size: 2rem;
+//     line-height: 2rem;
+//   }
+//   .foto-nombre {
+//     color: red;
+
+//   }
+// }
 

@@ -23,7 +23,14 @@ export class ChampionComponent implements OnInit {
   width: number;
   height: number;
 
-  constructor(private util:FuncionesCompartidasService, private router: Router, private http: HttpClient) { }
+  condition = true;
+
+  constructor(private util:FuncionesCompartidasService, private router: Router, private http: HttpClient) {
+    // setInterval(()=>{
+    //   // this.isOpen = !this.isOpen
+    //   this.onResized(event)
+    //   }, 1000)
+   }
 
 
   ngOnInit(): void {
@@ -39,6 +46,10 @@ export class ChampionComponent implements OnInit {
       });
   }
 
+  condicion() {
+    if (this.height > 500 ) {return true}
+    else {return false}
+  }
   obtainDatos(x) {
     return this.datos[x].charAt(0).toUpperCase() + this.datos[x].slice(1)
   }
@@ -75,9 +86,10 @@ export class ChampionComponent implements OnInit {
   onResized(event: ResizedEvent) {
     this.width = event.newWidth;
     this.height = event.newHeight;
+    console.log(this.width, 'el otro');
+    console.log(this.height,'este');
   }
 }
 function i(i: any) {
   throw new Error('Function not implemented.');
 }
-

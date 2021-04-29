@@ -1,9 +1,10 @@
+<main (resized)="onResized($event)">
 <img [src]="imagenPrincipal(campeon)" alt="Primer Campeon" >
 
-<div class="imagen-centrada-redonda">
-  <div class="foto-nombre" (resized)="onResized($event)" >
+<div [ngClass]="width > 576 ? 'imagen-centrada-redonda' : 'imagen-centrada-pequena' ">
+  <div class="foto-nombre" >
     <img class="img-centered-round" [src]="imagenPequena(campeon)" alt="Imagen Rounded">
-    <h2 class="nombre" (resized)="onResized($event)">
+    <h2>
       {{unCamelCase(campeon)}}
     </h2>
   </div>
@@ -47,3 +48,5 @@
   <h2>{{ obtainDatos(3) }}</h2>
   <p>{{ obtainDatos(6) }}</p>
 </div>
+
+</main>
