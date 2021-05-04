@@ -1,14 +1,12 @@
 # BotlaneCarry
-Proyecto de ADC en ANGULAR
+Proyecto de practica y aprendizaje usando Angular y Angular Material. WIP.
+https://botlanecarry.web.app/
 
 # TO DO: 
 1. Arrays con TODOS los nombres de los campeones que pondremos
 
 2. usar el JSON de la API de League
-2.1. Definir objeto para skins, osea,  {
-  nombre: swain
-  skins: 7
-  numero skins: 1 2 3 4 5 6 7 11 (segun el url)
+2.1. Usar objetos para campeones
 
 3. hacer que la seccion skins oculte las skins que el link falla
 }
@@ -28,6 +26,5 @@ Igualmente con los nombres, no escribiriamos 'tristana' en el main.html sino nom
 6. estructura pagina web campeones: Mi plan es hacer una sola estructura y que los valores e imagenes se llenen a partir del array nombre que tenemos, es decir: si presiono a swain o a ezreal, en vez de hacer una pagina para cada uno (paginaweb/ezreal , paginaweb/swain) lo que haria seria: paginaweb/campeon y los datos se le pasarian a traves de un ?child? 
 
 2. desglosar y ocultar secciones: Habilidades Historia Skins (mejorar)
-# Remember
 
 OutputPath en el angular.json para cuando implemento firebase
