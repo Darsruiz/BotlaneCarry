@@ -88,7 +88,19 @@
 
 #habilidades {
   display: none;
-  color: red
+  background-color: #6d6d6d;
+  color: red;
+  div {
+    display: grid;
+    grid-template-columns: 1;
+    background-color: #212121;
+    padding-top: 10%;
+    padding-left: 10%;
+    img {
+      width: 70px;
+      height: 70px;
+    }
+  }
 }
 #historia {
   display: flex;

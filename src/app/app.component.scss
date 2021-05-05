@@ -2,6 +2,9 @@
   flex: 1 1 auto;
 }
 
+.buscar {
+  color: aliceblue;
+}
 
 .toolbar {
   z-index: 1000;
@@ -9,7 +12,7 @@
   background-color: #212121;
   transition: background-color 0.35s ease-in-out;
   mat-grid-tile {
-    background-color: #21212100;
+    background-color: #212121;
     transition: background-color 0.35s ease-in-out;
     :hover {
       background-color: #6d6d6d;

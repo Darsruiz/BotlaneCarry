@@ -5,10 +5,22 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 // Import the resized event model
 import { ResizedEvent } from 'angular-resize-event';
+
+// import {
+//   trigger,
+//   state,
+//   style,
+//   animate,
+//   transition,
+//   // ...
+//   } from '@angular/animations';
 @Component({
   selector: 'app-champion',
   templateUrl: './champion.component.html',
   styleUrls: ['./champion.component.scss']
+  // animations: [
+  //   animation triggers go here
+  // ]
 })
 
 export class ChampionComponent implements OnInit {
@@ -42,6 +54,7 @@ export class ChampionComponent implements OnInit {
       const deconstruct1  = Object.values(res);
       const deconstruct2 = Object.values(deconstruct1[3]);
       const deconstruct3 = Object.values(deconstruct2[0]);
+      console.log(deconstruct2);
       this.datos = deconstruct3;
       });
   }
