@@ -32,6 +32,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 //fixes
 
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { CommonModule } from '@angular/common';
 
     //fixes
     CommonModule,
+    FormsModule,
   ],
   providers: [FuncionesCompartidasService],
   bootstrap: [AppComponent]

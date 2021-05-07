@@ -28,6 +28,7 @@ export class AppComponent{
   searchResults;
   nameTemp;
   arr = []
+  values
 
   constructor(private router: Router) { }
 
@@ -65,13 +66,17 @@ export class AppComponent{
   filtrarArrays(Mid?, Top?, Jungle?, Adc?, Support?) {
     let a
     a = this.arr.concat(Top, Jungle, Mid, Adc, Support)
-    this.searchResults = a.filter('Swain')
+    console.log(a)
+    this.searchResults = a.filter(word => this.values)
   }
   resultadoImg(i) {
     this.nameTemp
     return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.searchResults[i]}.png`
   }
   unCamelCase() {
+    if (this.nameTemp === undefined) {
+      return 'placeholder'
+    }
     return this.nameTemp.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
   }
 }

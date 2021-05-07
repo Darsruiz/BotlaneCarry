@@ -130,6 +130,9 @@ export class MainComponent implements OnInit {
   }
 
   unCamelCase() {
+    if (this.nameTemp === undefined) {
+      return 'placeholder'
+    }
     return this.nameTemp.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
   }
   }

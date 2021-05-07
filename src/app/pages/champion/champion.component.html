@@ -13,7 +13,7 @@
   <mat-grid-list class="seccions" cols="3" rowHeight="70px">
     <mat-grid-tile>
       <button mat-flat-button (click)="show('habilidades')">
-        Habilidades
+        Tips
       </button>
     </mat-grid-tile>
     <mat-grid-tile>
@@ -31,37 +31,46 @@
 
 <div>
   <mat-grid-list cols="3" rowHeight="405:239" id="skins">
-    <mat-grid-tile *ngFor="let row of skin; let i = index">
-      <img [src]="skins(i, campeon)" alt="Skin Campeon">
+    <mat-grid-tile *ngFor="let row of arrayN; let i = index">
+      <img [src]="skins(campeon, row)" alt="Skin Campeon">
     </mat-grid-tile>
   </mat-grid-list>
 </div>
 
 <div id="habilidades">
-    <div>
-      <img src="http://ddragon.leagueoflegends.com/cdn/11.9.1/img/passive/Anivia_P.png" alt="Passive">
-      <h3>placeholder</h3>
-      <p>placeholder</p>
-    </div>
-    <div>
+    <!-- <div>
       <img src="http://ddragon.leagueoflegends.com/cdn/11.9.1/img/passive/Anivia_P.png" alt="Q">
-      <h3>placeholder</h3>
-      <p>placeholder</p>
+      <h2>{{ obtainDatosSkills(0, 'name', datosSkills) }}</h2>
+      <p>{{ obtainDatosSkills(6, 'description', datosSkills) }}</p>
     </div>
     <div>
       <img src="http://ddragon.leagueoflegends.com/cdn/11.9.1/img/passive/Anivia_P.png" alt="W">
-      <h3>placeholder</h3>
-      <p>placeholder</p>
+      <h2>{{ obtainDatosSkills(1, 'name', datosSkills) }}</h2>
+      <p>{{ obtainDatosSkills(6, 'description', datosSkills) }}</p>
     </div>
     <div>
       <img src="http://ddragon.leagueoflegends.com/cdn/11.9.1/img/passive/Anivia_P.png" alt="E">
-      <h3>placeholder</h3>
-      <p>placeholder</p>
+      <h2>{{ obtainDatosSkills(2, 'name', datosSkills) }}</h2>
+      <p>{{ obtainDatosSkills(6, 'description', datosSkills) }}</p>
     </div>
     <div>
       <img src="http://ddragon.leagueoflegends.com/cdn/11.9.1/img/passive/Anivia_P.png" alt="R">
-      <h3>placeholder</h3>
-      <p>placeholder</p>
+      <h2>{{ obtainDatosSkills(3, 'name', datosSkills) }}</h2>
+      <p>{{ obtainDatosSkills(6, 'description', datosSkills) }}</p>
+    </div> -->
+    <div>
+      <h2> Allies</h2>
+      <ul>
+        <li >{{tipsAlly[0]}}</li>
+        <li >{{tipsAlly[1]}}</li>
+        <li >{{tipsAlly[2]}}</li>
+      </ul>
+      <h2> Enemies</h2>
+      <ul>
+        <li >{{tipsEnemy[0]}}</li>
+        <li >{{tipsEnemy[1]}}</li>
+        <li >{{tipsEnemy[2]}}</li>
+      </ul>
     </div>
 </div>
 

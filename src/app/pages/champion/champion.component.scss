@@ -1,4 +1,6 @@
-
+main {
+  background-color: rgb(26, 26, 26);
+}
   img {
     height: 300px;
     width: 100%;
@@ -56,7 +58,7 @@
       text-align: center;
       margin-top: -30px;
       font-size: 4rem;
-      color: #212121;
+      color: whitesmoke;
       margin-top: 40px;
       line-height: 4rem;
     }
@@ -88,22 +90,31 @@
 
 #habilidades {
   display: none;
-  background-color: #6d6d6d;
-  color: red;
+  background-color: rgb(26, 26, 26);
   div {
-    display: grid;
-    grid-template-columns: 1;
-    background-color: #212121;
-    padding-top: 10%;
-    padding-left: 10%;
-    img {
-      width: 70px;
-      height: 70px;
+    padding: 5% 10% 10% 10%;
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 4rem;
+      color: whitesmoke;
+      margin-bottom: 40px;
+      line-height: 4rem;
+    }
+    ul {
+
+      li {
+      color: aliceblue;
+      font-size: 2rem;
+      line-height: 3rem;
+      margin-bottom: 20px;
+      }
     }
   }
 }
 #historia {
   display: flex;
+  background-color: rgb(26, 26, 26);
   flex-direction: column;
   justify-content: center;
   align-content: center;
@@ -124,6 +135,7 @@
 }
 #skins {
   display: none;
+  background-color: rgb(26, 26, 26);
 }
 
 .small {

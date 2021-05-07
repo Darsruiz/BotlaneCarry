@@ -19,7 +19,7 @@ export class nombreSkins {
   public static Jungle = ["Amumu", "Darius", "Diana", "DrMundo", "Ekko", "Elise", "Evelynn",
   "Fiddlesticks", "Gragas", "Graves", "Gwen", "Hecarim", "Ivern", "Jax", "Karthus", "Kayn",
   "Khazix", "Kindred", "Kled", "LeeSin", "Lillia", "MasterYi", "Nidalee", "Mordekaiser",
-  "Morgana", "Nidalee", "Nocturne", "Nunu", "Olaf", "Poppy", "Rammus", "RekSai", "Rengar",
+  "Morgana", "Nocturne", "Nunu", "Olaf", "Poppy", "Rammus", "RekSai", "Rengar",
    "Rumble", "Sejuani","Sett", "Shaco", "Shyvana", "Skarner", "Sylas", "Taliyah", "Trundle",
     "Udyr", "Vi", "Viego", "Volibear", "Warwick", "MonkeyKing", "XinZhao", "Zac"];
 

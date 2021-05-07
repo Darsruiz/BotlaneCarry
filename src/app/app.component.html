@@ -35,7 +35,7 @@
 <div>
   <form id="search" >
     <mat-form-field>
-      <input matInput (keyup)="filtrarArrays(Top, Jungle, Mid, Adc, Support)">
+      <input matInput type="text" [(ngModel)]="values" name="values" (keyup)="filtrarArrays(Top, Jungle, Mid, Adc, Support)">
     </mat-form-field>
   </form>
   <mat-grid-list id="results" class="pequeno" (resized)="onResized($event)" cols="4" rowHeight="1:1">
