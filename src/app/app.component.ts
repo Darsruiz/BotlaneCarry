@@ -73,8 +73,9 @@ export class AppComponent{
     //console.log(arrayFull)
 
     // estandarizar values
-    this.values = this.values.toLowerCase()
-    this.values = this.values.charAt(0).toUpperCase() + values.slice(1)
+    values = this.values
+    values = values.toLowerCase()
+    values = values.charAt(0).toUpperCase() + values.slice(1)
 
     //arrayFiltrado = this.arrayFull.match()
     // console.log(this.arrayFull.includes(values)? `${values} yes` : `${values} no`)
@@ -82,8 +83,7 @@ export class AppComponent{
 
 
     this.searchResults = this.arrayFull.filter(word => {
-      return word.includes(this.values)
-      })
+      return word.includes(values || this.values)})
       console.log("SearchResults:", this.searchResults)
 
 

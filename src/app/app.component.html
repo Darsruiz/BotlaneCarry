@@ -41,8 +41,8 @@
     </mat-form-field>
   </form>
   <mat-grid-list id="results" class="pequeno" (resized)="onResized($event)" cols="4" rowHeight="1:1">
-    <mat-grid-tile *ngFor=" let row of searchResults; let i = index"  >
-      <img [src]="resultadoImg(i)" [routerLink]="['/champion',nameTemp]" value="Swain" >
+    <mat-grid-tile *ngFor="let row of searchResults; let i = index"  >
+      <img [src]="resultadoImg(i)" [routerLink]="['/champion',nameTemp]">
       <mat-grid-tile-footer>{{ unCamelCase() }}</mat-grid-tile-footer>
     </mat-grid-tile>
   </mat-grid-list>
