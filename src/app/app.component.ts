@@ -73,11 +73,21 @@ export class AppComponent{
     //console.log(arrayFull)
 
     // estandarizar values
-    values = values.toLowerCase()
-    values = values.charAt(0).toUpperCase() + values.slice(1)
+    this.values = this.values.toLowerCase()
+    this.values = this.values.charAt(0).toUpperCase() + values.slice(1)
 
     //arrayFiltrado = this.arrayFull.match()
-    console.log(this.arrayFull.includes(values)? `${values} yes` : `${values} no`)
+    // console.log(this.arrayFull.includes(values)? `${values} yes` : `${values} no`)
+
+
+
+    this.searchResults = this.arrayFull.filter(word => {
+      return word.includes(this.values)
+      })
+      console.log("SearchResults:", this.searchResults)
+
+
+
     //this.searchResults = a.match(values)
     //console.log(values)
     // this.a.filter(function(values) {
@@ -96,8 +106,8 @@ export class AppComponent{
 
 
   resultadoImg(i) {
-    this.nameTemp = this.arrayFiltrado[i]
-    return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.arrayFiltrado[i]}.png`
+    this.nameTemp = this.arrayFull[i]
+    return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.arrayFull[i]}.png`
   }
   unCamelCase() {
     if (this.nameTemp === undefined) {
