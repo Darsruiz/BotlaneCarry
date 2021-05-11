@@ -35,11 +35,13 @@
 <div>
   <form id="search" >
     <mat-form-field>
-      <input matInput type="text" [(ngModel)]="values" name="values" (keyup)="filtrarArrays(Top, Jungle, Mid, Adc, Support)">
+      <input matInput type="text" [(ngModel)]="values" name="values" placeholder="Type to search"
+      (keyup)="filtrarArrays($event.target.value)
+      ">
     </mat-form-field>
   </form>
   <mat-grid-list id="results" class="pequeno" (resized)="onResized($event)" cols="4" rowHeight="1:1">
-    <mat-grid-tile *ngFor=" let row of searchResults; let i = index"  >
+    <mat-grid-tile *ngFor=" let row of arrayFull | filter:values; let i = index"  >
       <img [src]="resultadoImg(i)" [routerLink]="['/champion',nameTemp]" value="Swain" >
       <mat-grid-tile-footer>{{ unCamelCase() }}</mat-grid-tile-footer>
     </mat-grid-tile>

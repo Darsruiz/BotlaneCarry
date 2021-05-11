@@ -21,14 +21,16 @@ export class AppComponent{
   Mid = nombreSkins.Mid
   Adc = nombreSkins.Adc
   Support = nombreSkins.Support
+  arrayFull = []
+  arrayFiltrado = ['Swain','Kindred']
   i;
   width: number;
   height: number;
   showHide = "search"
   searchResults;
   nameTemp;
-  arr = []
-  values
+  values: string = '';
+  a
 
   constructor(private router: Router) { }
 
@@ -63,19 +65,43 @@ export class AppComponent{
 
   }
 
-  filtrarArrays(Mid?, Top?, Jungle?, Adc?, Support?) {
-    let a
-    a = this.arr.concat(Top, Jungle, Mid, Adc, Support)
-    console.log(a)
-    this.searchResults = a.filter(word => this.values)
+  filtrarArrays(values) {
+
+    // crear array con todos
+    let base = []
+    this.arrayFull = base.concat(this.Top, this.Jungle, this.Mid, this.Adc, this.Support)
+    //console.log(arrayFull)
+
+    // estandarizar values
+    values = values.toLowerCase()
+    values = values.charAt(0).toUpperCase() + values.slice(1)
+
+    //arrayFiltrado = this.arrayFull.match()
+    console.log(this.arrayFull.includes(values)? `${values} yes` : `${values} no`)
+    //this.searchResults = a.match(values)
+    //console.log(values)
+    // this.a.filter(function(values) {
+    //   if (values === this.a[0]) {
+    //     console.log(values,'dentro');
+    //   } else console.log('object');
+
+    // })
+
+    this.searchResults = this.arrayFull
+
+
+    return this.searchResults
   }
+
+
+
   resultadoImg(i) {
-    this.nameTemp
-    return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.searchResults[i]}.png`
+    this.nameTemp = this.arrayFiltrado[i]
+    return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.arrayFiltrado[i]}.png`
   }
   unCamelCase() {
     if (this.nameTemp === undefined) {
-      return 'placeholder'
+      return 'Loading...'
     }
     return this.nameTemp.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");
   }

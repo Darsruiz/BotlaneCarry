@@ -74,10 +74,15 @@ form {
   }
 }
 #results {
+  background-color:#1b1b1b8c;
   position: absolute;
   top: 16%;
   z-index: 1000;
   width: 100%;
+  mat-grid-tile img {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
