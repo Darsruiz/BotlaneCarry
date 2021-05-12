@@ -89,9 +89,9 @@ export class AppComponent{
     return self.indexOf(value) === index;
   }
 
-  resultadoImg(i) {
-    this.nameTemp = this.arrayFull[i]
-    return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${this.arrayFull[i]}.png`
+  resultadoImg(array, i) {
+    this.nameTemp = array[i]
+    return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${array[i]}.png`
   }
   unCamelCase() {
     if (this.nameTemp === undefined) {
