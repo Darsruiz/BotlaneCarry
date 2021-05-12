@@ -1,19 +1,21 @@
 # BotlaneCarry
-Proyecto de practica y aprendizaje usando Angular y Angular Material. WIP.
+Proyecto de practica y aprendizaje usando Angular y Angular Material. Proyecto Finalizado
 https://botlanecarry.web.app/
 
 # TO DO: 
-1. Arrays con TODOS los nombres de los campeones que pondremos
+
+
+
+
+# LISTO:
+
 
 2. usar el JSON de la API de League
 2.1. Usar objetos para campeones
 
 3. hacer que la seccion skins oculte las skins que el link falla
-}
 
-4. usando el JSON: Habilidades, Ratios, Dano, Enfriamiento, todo en variables y constantes, ex teemo: console.log(`Con nivel de Q: ${Qlvl+1} y AP: ${ap} el dano es: ${totalDamage}, y la duracion del blind es: ${blindDuration[Qlvl]}`);
-
-# LISTO:
+1. Arrays con TODOS los nombres de los campeones que pondremos
 
 Imagenes skins campeones: La idea es que las casillas se anumeren y como tendremos 2 arrays, uno para skins y otro para campeones podriamos modificarlo mucho mas facil al final.
 

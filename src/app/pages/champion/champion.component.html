@@ -32,32 +32,12 @@
 <div>
   <mat-grid-list cols="3" rowHeight="405:239" id="skins">
     <mat-grid-tile *ngFor="let row of arrayN; let i = index">
-      <img [src]="skins(campeon, row)" alt="Skin Campeon">
+      <a [href]="skins(campeon, row)"><img [src]="skins(campeon, row)" alt="Skin Campeon"></a>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
 
 <div id="habilidades">
-    <!-- <div>
-      <img src="http://ddragon.leagueoflegends.com/cdn/11.9.1/img/passive/Anivia_P.png" alt="Q">
-      <h2>{{ obtainDatosSkills(0, 'name', datosSkills) }}</h2>
-      <p>{{ obtainDatosSkills(6, 'description', datosSkills) }}</p>
-    </div>
-    <div>
-      <img src="http://ddragon.leagueoflegends.com/cdn/11.9.1/img/passive/Anivia_P.png" alt="W">
-      <h2>{{ obtainDatosSkills(1, 'name', datosSkills) }}</h2>
-      <p>{{ obtainDatosSkills(6, 'description', datosSkills) }}</p>
-    </div>
-    <div>
-      <img src="http://ddragon.leagueoflegends.com/cdn/11.9.1/img/passive/Anivia_P.png" alt="E">
-      <h2>{{ obtainDatosSkills(2, 'name', datosSkills) }}</h2>
-      <p>{{ obtainDatosSkills(6, 'description', datosSkills) }}</p>
-    </div>
-    <div>
-      <img src="http://ddragon.leagueoflegends.com/cdn/11.9.1/img/passive/Anivia_P.png" alt="R">
-      <h2>{{ obtainDatosSkills(3, 'name', datosSkills) }}</h2>
-      <p>{{ obtainDatosSkills(6, 'description', datosSkills) }}</p>
-    </div> -->
     <div>
       <h2> Allies</h2>
       <ul>

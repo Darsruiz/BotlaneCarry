@@ -53,7 +53,7 @@ export class ChampionComponent implements OnInit {
     this.campeon = this.router.url.split('/')[2];
     // console.log((this.campeon));
 
-    const url = `https://ddragon.leagueoflegends.com/cdn/11.9.1/data/en_US/champion/${this.campeon}.json`
+    const url = `https://ddragon.leagueoflegends.com/cdn/11.10.1/data/en_US/champion/${this.campeon}.json`
     const promise = await this.http.get(url).toPromise()
 
     this.metodoCogerNums(this.campeon, promise)
@@ -121,7 +121,7 @@ export class ChampionComponent implements OnInit {
   }
 
   imagenPequena (campeon: string) {
-    return `http://ddragon.leagueoflegends.com/cdn/11.9.1/img/champion/${campeon}.png`
+    return `http://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${campeon}.png`
   }
 
   skins(campeon: string, i: number) {

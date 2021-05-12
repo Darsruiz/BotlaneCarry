@@ -20,11 +20,11 @@ const routes: Routes = [
     path: 'champion/:id',
     component: ChampionComponent
   },
-  // { //si el path es cualquier cosa que no esta listado arriba ^ llevara a listado
-  //   path: "**",
-  //   redirectTo: "listado",
-  //   pathMatch: "full"
-  // }
+  //{ //si el path es cualquier cosa que no esta listado arriba ^ llevara a listado
+     //path: "**",
+     //redirectTo: "MainComponent",
+     //pathMatch: "full"
+   //}
   ];
 
 @NgModule({
