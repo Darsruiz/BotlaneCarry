@@ -40,13 +40,19 @@
       ">
     </mat-form-field>
   </form>
+</div>
+
+<ng-container>
   <mat-grid-list id="results" class="pequeno" (resized)="onResized($event)" cols="4" rowHeight="1:1">
     <mat-grid-tile *ngFor="let row of searchResults; let i = index"  >
       <img [src]="resultadoImg(i)" [routerLink]="['/champion',nameTemp]">
       <mat-grid-tile-footer>{{ unCamelCase() }}</mat-grid-tile-footer>
     </mat-grid-tile>
   </mat-grid-list>
-</div>
+</ng-container>
+
+
+
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="/__/firebase/8.4.1/firebase-app.js"></script>

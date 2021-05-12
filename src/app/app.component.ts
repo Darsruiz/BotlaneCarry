@@ -77,33 +77,17 @@ export class AppComponent{
     values = values.toLowerCase()
     values = values.charAt(0).toUpperCase() + values.slice(1)
 
-    //arrayFiltrado = this.arrayFull.match()
-    // console.log(this.arrayFull.includes(values)? `${values} yes` : `${values} no`)
-
-
-
     this.searchResults = this.arrayFull.filter(word => {
       return word.includes(values || this.values)})
-      console.log("SearchResults:", this.searchResults)
 
-
-
-    //this.searchResults = a.match(values)
-    //console.log(values)
-    // this.a.filter(function(values) {
-    //   if (values === this.a[0]) {
-    //     console.log(values,'dentro');
-    //   } else console.log('object');
-
-    // })
-
-    this.searchResults = this.arrayFull
-
-
+    this.searchResults = this.searchResults.filter(this.onlyUnique)
+    console.log("SearchResults:", this.searchResults)
     return this.searchResults
   }
 
-
+  onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
+  }
 
   resultadoImg(i) {
     this.nameTemp = this.arrayFull[i]
