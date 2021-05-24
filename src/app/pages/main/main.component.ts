@@ -1,8 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { skinsName } from "../../../assets/skinsName";
 import { Router } from '@angular/router';
-import {MatListModule} from '@angular/material/list';
-import {MatGridListModule} from '@angular/material/grid-list';
 
 // Import the resized event model
 import { ResizedEvent } from 'angular-resize-event';

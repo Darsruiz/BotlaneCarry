@@ -35,7 +35,7 @@ main {
   }
 }
 
-.imagen-centrada-pequena {
+.imgCenteredRound {
   width: 100%;
   margin-top: -20px;
   padding-bottom: 50px;
@@ -64,7 +64,7 @@ main {
     }
   }
 }
-.seccions {
+.sections {
   margin-top: -30px;
   background-color: #004ecb;
   mat-grid-tile {
@@ -88,8 +88,8 @@ main {
 
 }
 
-#habilidades {
-  display: none;
+.tips {
+  display: flex;
   background-color: rgb(26, 26, 26);
   div {
     padding: 5% 10% 10% 10%;
@@ -112,7 +112,7 @@ main {
     }
   }
 }
-#historia {
+.history {
   display: flex;
   background-color: rgb(26, 26, 26);
   flex-direction: column;
@@ -134,7 +134,7 @@ main {
   }
 }
 #skins {
-  display: none;
+  display: flex;
   background-color: rgb(26, 26, 26);
 }
 

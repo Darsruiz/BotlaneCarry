@@ -46,8 +46,7 @@
 <ng-container *ngIf="searchDisplay">
   <mat-grid-list id="results" class="small" (resized)="onResized($event)" cols="4" rowHeight="1:1">
     <mat-grid-tile *ngFor="let row of searchResults; let i = index">
-      <img (click)="searchDisplay()" [src]="resultImg(searchResults, i)" [routerLink]="['/champion', nameTemp]" />
-      <mat-grid-tile-footer>{{ unCamelCase() }}</mat-grid-tile-footer>
+      <img class="searchResultImg" (click)="navigateToChampion(i)" [src]="resultImg(searchResults, i)" />
     </mat-grid-tile>
   </mat-grid-list>
 </ng-container>

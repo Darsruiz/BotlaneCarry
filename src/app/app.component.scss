@@ -74,6 +74,14 @@ form {
     text-align: center;
   }
 }
+
+.searchResultImg {
+  border-radius: 50%;
+  border: 9px solid #1b1b1b;
+  max-width: 200px;
+  max-height: 200px;
+}
+
 #results {
   background-color:#1b1b1b8c;
   position: absolute;

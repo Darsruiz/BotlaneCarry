@@ -27,12 +27,13 @@ export class ChampionComponent implements OnInit {
 
   nombres = skinsName.names
   skin = skinsName.skin
-  campeon;
+  champion;
   i;
   datos = ['placeholder','placeholder','placeholder',
   'placeholder','placeholder','placeholder','placeholder','placeholder'];
   tipsAlly = ['placeholder','placeholder','placeholder'];
   tipsEnemy = ['placeholder','placeholder','placeholder'];
+  section = 1;
 
   width: number;
   height: number;
@@ -42,6 +43,9 @@ export class ChampionComponent implements OnInit {
   arrayN = []
 
   constructor(private util:SharedFunctionsService, private router: Router, private http: HttpClient) {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => {
+      return false;
+    };
     // setInterval(()=>{
     //   // this.isOpen = !this.isOpen
     //   this.onResized(event)
@@ -50,15 +54,15 @@ export class ChampionComponent implements OnInit {
 
 
   async ngOnInit() {
-    this.campeon = this.router.url.split('/')[2];
-    // console.log((this.campeon));
+    this.champion = this.router.url.split('/')[2];
+    // console.log((this.champion));
 
-    const url = `https://ddragon.leagueoflegends.com/cdn/11.10.1/data/en_US/champion/${this.campeon}.json`
+    const url = `https://ddragon.leagueoflegends.com/cdn/11.10.1/data/en_US/champion/${this.champion}.json`
     const promise = await this.http.get(url).toPromise()
 
-    this.metodoCogerNums(this.campeon, promise)
+    this.metodoCogerNums(this.champion, promise)
     // const arrayN = []
-    // promise.data.this.campeon.skins.forEach(element => {
+    // promise.data.this.champion.skins.forEach(element => {
     //   arrayN.push[element.num];
     // });
 
@@ -82,7 +86,8 @@ export class ChampionComponent implements OnInit {
       });
   }
 
-  metodoCogerNums(campeon: string, promise): number[]{
+
+  metodoCogerNums(champion: string, promise): number[]{
 
     // deconstructions of promise
     let deconstruct3 = []
@@ -111,33 +116,25 @@ export class ChampionComponent implements OnInit {
     return this.datos[x].charAt(0).toUpperCase() + this.datos[x].slice(1)
   }
 
-  // obtainDatosSkills(x: number, valor: string, datosSkills) {
-  //   console.log('obtaindatosskillsfunction',datosSkills[x])
-  //   return datosSkills[x][valor]
-  // }
-
-  imagenPrincipal (campeon: string) {
-    return this.util.imagenPrincipal(campeon)
+  show(number: number) {
+    this.section = number;
   }
 
-  imagenPequena (campeon: string) {
-    return `http://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${campeon}.png`
+
+  imagenPrincipal (champion: string) {
+    return this.util.imagenPrincipal(champion)
   }
 
-  skins(campeon: string, i: number) {
-    return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${campeon}_${i}.jpg`
+  imagenPequena (champion: string) {
+    return `http://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${champion}.png`
   }
 
-  show(element) {
-    document.getElementById('habilidades')!.style.display = "none";
-    document.getElementById('historia')!.style.display = "none";
-    document.getElementById('skins')!.style.display = "none";
-
-    document.getElementById(element)!.style.display = "block";
-    console.log(element);
+  skins(champion: string, i: number) {
+    return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_${i}.jpg`
   }
-  unCamelCase(campeon) {
-    return this.util.unCamelCase(campeon)
+
+  unCamelCase(champion) {
+    return this.util.unCamelCase(champion)
   }
 
   onResized(event: ResizedEvent) {

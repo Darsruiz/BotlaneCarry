@@ -71,6 +71,12 @@ export class AppComponent{
     this.nameTemp = array[i]
     return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${array[i]}.png`
   }
+
+  navigateToChampion(i) {
+    this.router.navigate([`/champion/${this.searchResults[i]}`])
+    this.DisplaySearch()
+
+  }
   unCamelCase() {
     if (this.nameTemp === undefined) {
       return 'Loading...'

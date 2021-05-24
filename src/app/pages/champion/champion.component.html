@@ -1,43 +1,43 @@
 <main (resized)="onResized($event)">
-<img [src]="imagenPrincipal(campeon)" alt="Primer Campeon" >
+<img [src]="imagenPrincipal(champion)" alt="Primer champion" >
 
-<div [ngClass]="width > 576 ? 'imagen-centrada-redonda' : 'imagen-centrada-pequena' ">
+<div [ngClass]="width > 576 ? 'imgCenteredRound' : 'imgCenteredRound' ">
   <div class="foto-nombre" >
-    <img class="img-centered-round" [src]="imagenPequena(campeon)" alt="Imagen Rounded">
+    <img class="img-centered-round" [src]="imagenPequena(champion)" alt="Imagen Rounded">
     <h2>
-      {{unCamelCase(campeon)}}
+      {{unCamelCase(champion)}}
     </h2>
   </div>
 </div>
 <div>
-  <mat-grid-list class="seccions" cols="3" rowHeight="70px">
+  <mat-grid-list class="sections" cols="3" rowHeight="70px">
     <mat-grid-tile>
-      <button mat-flat-button (click)="show('habilidades')">
+      <button mat-flat-button (click)="show(2)">
         Tips
       </button>
     </mat-grid-tile>
     <mat-grid-tile>
-      <button mat-flat-button (click)="show('historia')">
+      <button mat-flat-button (click)="show(3)">
         History
       </button>
     </mat-grid-tile>
     <mat-grid-tile>
-      <button mat-flat-button (click)="show('skins')">
+      <button mat-flat-button (click)="show(1)">
         Skins
       </button>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
 
-<div>
+<div *ngIf="section == 1">
   <mat-grid-list cols="3" rowHeight="405:239" id="skins">
     <mat-grid-tile *ngFor="let row of arrayN; let i = index">
-      <a [href]="skins(campeon, row)"><img [src]="skins(campeon, row)" alt="Skin Campeon"></a>
+      <a [href]="skins(champion, row)"><img [src]="skins(champion, row)" alt="Skin champion"></a>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
 
-<div id="habilidades">
+<div *ngIf="section == 2" class="tips">
     <div>
       <h2> Allies</h2>
       <ul>
@@ -54,7 +54,7 @@
     </div>
 </div>
 
-<div id="historia">
+<div *ngIf="section == 3" class="history">
   <h2>{{ obtainDatos(3) }}</h2>
   <p>{{ obtainDatos(6) }}</p>
 </div>

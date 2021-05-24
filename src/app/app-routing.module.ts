@@ -19,11 +19,11 @@ const routes: Routes = [
   {
     path: 'champion/:id',
     component: ChampionComponent
-  }
+  },
   ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
   exports: [RouterModule,
   ]
 })
