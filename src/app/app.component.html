@@ -1,54 +1,55 @@
 <div class="toolbar-lanes">
   <button mat-flat-button [routerLink]="['']">
-    <svg-icon src="../assets/svg/leagueIcon.svg" [svgStyle]="{ 'width.px':55 }"></svg-icon>
+    <svg-icon src="../assets/svg/leagueIcon.svg" [svgStyle]="{ 'width.px': 55 }"></svg-icon>
   </button>
-  <button mat-flat-button class="championSearchButton" (click)="searchDisplay()" ><mat-icon>{{showHide}}</mat-icon></button>
+  <button mat-flat-button class="championSearchButton" (click)="DisplaySearch()">
+    <mat-icon>{{ showHide }}</mat-icon>
+  </button>
 </div>
-  <mat-grid-list class="toolbar" cols="5" rowHeight="60px">
-    <mat-grid-tile>
-      <button mat-flat-button [routerLink]="['/main/Top']">
-        <img src="../assets/lanes/top.png" alt="Top">
-      </button>
-    </mat-grid-tile>
-    <mat-grid-tile>
+<mat-grid-list class="toolbar" cols="5" rowHeight="60px">
+  <mat-grid-tile>
+    <button mat-flat-button [routerLink]="['/main/Top']">
+      <img src="../assets/lanes/top.svg" alt="Top" />
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile>
     <button mat-flat-button [routerLink]="['/main/Jungle']">
-      <img src="../assets/lanes/jungle.png" alt="Jungle">
+      <img src="../assets/lanes/jungle.svg" alt="Jungle" />
     </button>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <button mat-flat-button [routerLink]="['/main/Mid']">
-        <img src="../assets/lanes/mid.png" alt="Mid">
-      </button>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <button mat-flat-button [routerLink]="['/main/Adc']">
-      <img src="../assets/lanes/bot.png" alt="Bot">
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button mat-flat-button [routerLink]="['/main/Mid']">
+      <img src="../assets/lanes/mid.svg" alt="Mid" />
     </button>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <button mat-flat-button [routerLink]="['/main/Support']">
-      <img src="../assets/lanes/support.png" alt="Support">
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button mat-flat-button [routerLink]="['/main/Adc']">
+      <img src="../assets/lanes/bot.svg" alt="Bot" />
     </button>
-    </mat-grid-tile>
-  </mat-grid-list>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button mat-flat-button [routerLink]="['/main/Support']">
+      <img src="../assets/lanes/support.svg" alt="Support" />
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>
 
-<div>
-  <form id="search" >
-    <mat-form-field>
+<div *ngIf="searchDisplay">
+  <form id="search">
+    <mat-form-field >
       <input matInput type="text" [(ngModel)]="values" name="values" placeholder="Type to search"
-      (keyup)="filterArrays($event.target.value)">
+        (keyup)="filterArrays($event.target.value)" />
     </mat-form-field>
   </form>
 </div>
 
-<ng-container>
+<ng-container *ngIf="searchDisplay">
   <mat-grid-list id="results" class="small" (resized)="onResized($event)" cols="4" rowHeight="1:1">
-    <mat-grid-tile *ngFor="let row of searchResults; let i = index"  >
-      <img (click)="searchDisplay()" [src]="resultImg(searchResults, i)" [routerLink]="['/champion',nameTemp]">
+    <mat-grid-tile *ngFor="let row of searchResults; let i = index">
+      <img (click)="searchDisplay()" [src]="resultImg(searchResults, i)" [routerLink]="['/champion', nameTemp]" />
       <mat-grid-tile-footer>{{ unCamelCase() }}</mat-grid-tile-footer>
     </mat-grid-tile>
   </mat-grid-list>
 </ng-container>
-
 
 <router-outlet></router-outlet>

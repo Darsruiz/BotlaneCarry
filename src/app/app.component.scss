@@ -61,16 +61,17 @@ img {
 
 
 form {
-  display: none;
+  display: flex;
   justify-content: center;
+  align-content: center;
   z-index: 1000;
   background-color: #1b1b1b;
   position: absolute;
   top: 8%;
   width: 100%;
-  input {
+  mat-form-field {
     color: aliceblue;
-    width: 100%;
+    text-align: center;
   }
 }
 #results {
