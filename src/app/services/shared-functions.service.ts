@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { nombreSkins } from '../../assets/nombreSkins';
+import { skinsName } from '../../assets/skinsName';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class FuncionesCompartidasService {
+export class SharedFunctionsService {
 
-  nombres = nombreSkins.nombres
-  skin = nombreSkins.skin
+  nombres = skinsName.names
+  skin = skinsName.skin
   campeon: any;
   i: Number;
 

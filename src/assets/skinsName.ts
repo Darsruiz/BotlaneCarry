@@ -1,6 +1,6 @@
-export class nombreSkins {
+export class skinsName {
 
-  public static nombres = ["Aatrox", "Akali", "Camille", "Cassiopeia", "Chogath", "Darius", "DrMundo",
+  public static names = ["Aatrox", "Akali", "Camille", "Cassiopeia", "Chogath", "Darius", "DrMundo",
   "Fiora", "Gangplank", "Garen", "Gnar","Gragas", "Gwen", "Hecarim", "Heimerdinger", "Illaoi",
   "Irelia", "Jax", "Jayce", "Kalista", "Karma", "Kayle", "Kennen", "Kled", "Lillia", "Lucian",
   "Malphite", "Maokai", "Mordekaiser", "Nasus", "Nocturne", "Olaf", "Ornn", "Pantheon", "Poppy",
@@ -40,7 +40,7 @@ export class nombreSkins {
 "Neeko","Pantheon","Pyke","Rakan","Rell","Senna","Sett","Shaco","Sona","Soraka","Swain","Seraphine",
 "TahmKench","Taliyah","Taric","Thresh","Veigar","Velkoz","Xerath","Yuumi","Zilean","Zyra"];
 
-  public static Lineas = ['Top', 'Jungle', 'Mid', 'Adc', 'Support','nombres'];
+  public static Lanes = ['Top', 'Jungle', 'Mid', 'Adc', 'Support','nombres'];
 
   public static skin = [1,0,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 

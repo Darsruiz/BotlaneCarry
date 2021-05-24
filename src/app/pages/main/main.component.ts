@@ -1,12 +1,12 @@
 import { Component, OnInit} from '@angular/core';
-import { nombreSkins } from "../../../assets/nombreSkins";
-import { FuncionesCompartidasService } from 'src/app/services/funciones-compartidas.service';
+import { skinsName } from "../../../assets/skinsName";
 import { Router } from '@angular/router';
 import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 // Import the resized event model
 import { ResizedEvent } from 'angular-resize-event';
+import { SharedFunctionsService } from '../../services/shared-functions.service';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -14,14 +14,14 @@ import { ResizedEvent } from 'angular-resize-event';
 })
 export class MainComponent implements OnInit {
 
-  nombres = nombreSkins.nombres
-  skin = nombreSkins.skin
-  Top = nombreSkins.Top
-  Jungle = nombreSkins.Jungle
-  Mid = nombreSkins.Mid
-  Adc = nombreSkins.Adc
-  Support = nombreSkins.Support
-  Lineas = nombreSkins.Lineas
+  nombres = skinsName.names
+  skin = skinsName.skin
+  Top = skinsName.Top
+  Jungle = skinsName.Jungle
+  Mid = skinsName.Mid
+  Adc = skinsName.Adc
+  Support = skinsName.Support
+  Lineas = skinsName.Lanes
   lineaLink: string;
   width: number;
   height: number;
@@ -30,7 +30,7 @@ export class MainComponent implements OnInit {
   placeholderArray = [1]
 
 
-  constructor(private util:FuncionesCompartidasService, private router: Router) { }
+  constructor(private util:SharedFunctionsService, private router: Router) { }
 
   ngOnInit(): void {
     this.lineaLink = 'Mid'

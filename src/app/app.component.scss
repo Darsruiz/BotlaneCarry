@@ -2,7 +2,7 @@
   flex: 1 1 auto;
 }
 
-.buscar {
+.championSearchButton {
   color: aliceblue;
 }
 
@@ -40,7 +40,7 @@ img {
   visibility: hidden;
 }
 
-.barra-negra {
+.toolbar-lanes {
   display: flex;
   justify-content: space-between;
   color: aliceblue;
@@ -86,7 +86,7 @@ form {
 }
 
 @media (max-width: 768px) {
-  .barra-negra {
+  .toolbar-lanes {
     height: 50px;
   }
 }

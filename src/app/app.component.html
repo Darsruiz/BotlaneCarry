@@ -1,8 +1,8 @@
-<div class="barra-negra">
+<div class="toolbar-lanes">
   <button mat-flat-button [routerLink]="['']">
     <svg-icon src="../assets/svg/leagueIcon.svg" [svgStyle]="{ 'width.px':55 }"></svg-icon>
   </button>
-  <button mat-flat-button class="buscar" (click)="searchDisplay()" ><mat-icon>{{showHide}}</mat-icon></button>
+  <button mat-flat-button class="championSearchButton" (click)="searchDisplay()" ><mat-icon>{{showHide}}</mat-icon></button>
 </div>
   <mat-grid-list class="toolbar" cols="5" rowHeight="60px">
     <mat-grid-tile>
@@ -36,31 +36,19 @@
   <form id="search" >
     <mat-form-field>
       <input matInput type="text" [(ngModel)]="values" name="values" placeholder="Type to search"
-      (keyup)="filtrarArrays($event.target.value)
-      ">
+      (keyup)="filterArrays($event.target.value)">
     </mat-form-field>
   </form>
 </div>
 
 <ng-container>
-  <mat-grid-list id="results" class="pequeno" (resized)="onResized($event)" cols="4" rowHeight="1:1">
+  <mat-grid-list id="results" class="small" (resized)="onResized($event)" cols="4" rowHeight="1:1">
     <mat-grid-tile *ngFor="let row of searchResults; let i = index"  >
-      <img (click)="searchDisplay()" [src]="resultadoImg(searchResults, i)" [routerLink]="['/champion',nameTemp]">
+      <img (click)="searchDisplay()" [src]="resultImg(searchResults, i)" [routerLink]="['/champion',nameTemp]">
       <mat-grid-tile-footer>{{ unCamelCase() }}</mat-grid-tile-footer>
     </mat-grid-tile>
   </mat-grid-list>
 </ng-container>
 
 
-
-
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/8.4.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/8.4.1/firebase-analytics.js"></script>
-
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
 <router-outlet></router-outlet>

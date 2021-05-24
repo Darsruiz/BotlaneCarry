@@ -1,10 +1,10 @@
 import { Component, OnInit} from '@angular/core';
-import { nombreSkins } from '../../../assets/nombreSkins';
-import { FuncionesCompartidasService } from 'src/app/services/funciones-compartidas.service';
+import { skinsName } from '../../../assets/skinsName';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 // Import the resized event model
 import { ResizedEvent } from 'angular-resize-event';
+import { SharedFunctionsService } from '../../services/shared-functions.service';
 
 // import {
 //   trigger,
@@ -25,8 +25,8 @@ import { ResizedEvent } from 'angular-resize-event';
 
 export class ChampionComponent implements OnInit {
 
-  nombres = nombreSkins.nombres
-  skin = nombreSkins.skin
+  nombres = skinsName.names
+  skin = skinsName.skin
   campeon;
   i;
   datos = ['placeholder','placeholder','placeholder',
@@ -41,7 +41,7 @@ export class ChampionComponent implements OnInit {
 
   arrayN = []
 
-  constructor(private util:FuncionesCompartidasService, private router: Router, private http: HttpClient) {
+  constructor(private util:SharedFunctionsService, private router: Router, private http: HttpClient) {
     // setInterval(()=>{
     //   // this.isOpen = !this.isOpen
     //   this.onResized(event)

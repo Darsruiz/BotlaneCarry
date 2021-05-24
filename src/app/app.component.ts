@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { nombreSkins } from '../assets/nombreSkins';
+import { skinsName } from '../assets/skinsName';
 
 // Import the resized event model
 import { ResizedEvent } from 'angular-resize-event';
@@ -15,12 +15,12 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 })
 export class AppComponent{
   title = 'BotlaneCarry';
-  nombresLineas = nombreSkins.Lineas;
-  Top = nombreSkins.Top
-  Jungle = nombreSkins.Jungle
-  Mid = nombreSkins.Mid
-  Adc = nombreSkins.Adc
-  Support = nombreSkins.Support
+  nombresLineas = skinsName.Lanes;
+  Top = skinsName.Top
+  Jungle = skinsName.Jungle
+  Mid = skinsName.Mid
+  Adc = skinsName.Adc
+  Support = skinsName.Support
   arrayFull = []
   arrayFiltrado = ['Swain','Kindred']
   i;
@@ -39,12 +39,12 @@ export class AppComponent{
     this.height = event.newHeight;
   }
 
-  seleccionarTop(i: number) {
+  selectTop(i: number) {
     console.log(`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.Top[i]}_0.jpg`)
     return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.Top[i]}_0.jpg`
   }
 
-  navegarLineas(i) {
+  navigateLanes(i) {
     console.log('navegar',this.nombresLineas[i]);
     this.router.navigate(['main',this.nombresLineas[i]]);
   }
@@ -65,14 +65,14 @@ export class AppComponent{
 
   }
 
-  filtrarArrays(values) {
+  filterArrays(values) {
 
-    // crear array con todos
+    // Create array with every lane
     let base = []
     this.arrayFull = base.concat(this.Top, this.Jungle, this.Mid, this.Adc, this.Support)
     //console.log(arrayFull)
 
-    // estandarizar values
+    // standarize values
     values = this.values
     values = values.toLowerCase()
     values = values.charAt(0).toUpperCase() + values.slice(1)
@@ -89,7 +89,7 @@ export class AppComponent{
     return self.indexOf(value) === index;
   }
 
-  resultadoImg(array, i) {
+  resultImg(array, i) {
     this.nameTemp = array[i]
     return `http://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/${array[i]}.png`
   }

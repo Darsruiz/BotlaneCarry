@@ -20,7 +20,6 @@ import {MatListModule} from '@angular/material/list';
 import { MainComponent } from './pages/main/main.component';
 import { ChampionComponent } from './pages/champion/champion.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
-import { FuncionesCompartidasService } from './services/funciones-compartidas.service';
 
 import { AngularResizedEventModule } from 'angular-resize-event';
 
@@ -33,6 +32,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { SharedFunctionsService } from './services/shared-functions.service';
 
 @NgModule({
   declarations: [
@@ -64,7 +64,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
   ],
-  providers: [FuncionesCompartidasService],
+  providers: [SharedFunctionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
