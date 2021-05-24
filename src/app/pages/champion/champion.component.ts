@@ -126,7 +126,7 @@ export class ChampionComponent implements OnInit {
   }
 
   imagenPequena (champion: string) {
-    return `http://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${champion}.png`
+    return `https://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${champion}.png`
   }
 
   skins(champion: string, i: number) {

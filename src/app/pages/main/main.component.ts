@@ -83,27 +83,27 @@ export class MainComponent implements OnInit {
       case ('Top'):
         this.nameTemp = this.Top[i]
         this.placeholderArray = Object.assign(this.placeholderArray, this.Top);
-        return `http://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${this.Top[i]}.png`
+        return `https://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${this.Top[i]}.png`
 
       case ('Jungle'):
         this.nameTemp = this.Jungle[i]
         this.placeholderArray = Object.assign(this.placeholderArray, this.Jungle);
-        return `http://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${this.Jungle[i]}.png`
+        return `https://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${this.Jungle[i]}.png`
 
       case ('Mid'):
         this.nameTemp = this.Mid[i]
         this.placeholderArray = Object.assign(this.placeholderArray, this.Mid);
-        return `http://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${this.Mid[i]}.png`
+        return `https://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${this.Mid[i]}.png`
 
       case ('Adc'):
         this.nameTemp = this.Adc[i]
         this.placeholderArray = Object.assign(this.placeholderArray, this.Adc);
-        return `http://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${this.Adc[i]}.png`
+        return `https://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${this.Adc[i]}.png`
 
       case ('Support'):
         this.nameTemp = this.Support[i]
         this.placeholderArray = Object.assign(this.placeholderArray, this.Support);
-        return `http://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${this.Support[i]}.png`
+        return `https://ddragon.leagueoflegends.com/cdn/11.10.1/img/champion/${this.Support[i]}.png`
 
       default:
         this.nameTemp = this.Mid[i].replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2");

@@ -10,7 +10,10 @@
 			"Botlane",
 			"bluegrey",
 			"codelyzer",
-			"preconnect"
+			"imagesizes",
+			"imagesrcset",
+			"preconnect",
+			"webp"
 		]
 	}
 }
