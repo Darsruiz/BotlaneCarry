@@ -1,9 +1,9 @@
 <div class="toolbar-lanes">
-  <button mat-flat-button [routerLink]="['']">
+  <button mat-flat-button [routerLink]="['']" aria-label="home">
     <svg-icon src="../assets/svg/leagueIcon.svg" [svgStyle]="{ 'width.px': 55 }"></svg-icon>
   </button>
-  <button mat-flat-button class="championSearchButton" (click)="DisplaySearch()">
-    <mat-icon>{{ showHide }}</mat-icon>
+  <button mat-flat-button class="championSearchButton" aria-label="search" (click)="DisplaySearch()">
+    <mat-icon >{{ showHide }}</mat-icon>
   </button>
 </div>
 <mat-grid-list class="toolbar" cols="5" rowHeight="60px">

@@ -1,26 +1,33 @@
 .grande {
-  mat-grid-tile-footer {
-    background-color: rgb(26, 26, 26);
-    display: flex;
-    justify-content: center;
-     font-size: 100%;
+  img {
+    width: 95%;
+    height: 95%;
+    border: 3px solid #212121;
+      border-radius: 6px;
   }
-  p {
-    position: absolute;
-    top: 45%;
-    color: rgb(220, 220, 220);
-    z-index: 0;
-    font-size: 3rem;
+  mat-grid-tile-footer {
+    background: none;
+    display: flex;
+    bottom: 20%;
+    justify-content: center;
+     font-size: 2.5rem;
   }
 }
 
 .pequeno {
    background-color: rgb(26, 26, 26);
   mat-grid-tile {
+    img {
+      width: 80%;
+      height: 80%;
+      border: 3px solid #212121;
+      border-radius: 10%;
+    }
     mat-grid-tile-footer {
       display: flex;
       justify-content: center;
       font-size: 100%;
+      background: none;
    }
    }
 

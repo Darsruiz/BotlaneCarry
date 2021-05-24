@@ -76,14 +76,14 @@ form {
 }
 
 .searchResultImg {
-  border-radius: 50%;
-  border: 9px solid #1b1b1b;
+  border: 3px solid #212121;
+  border-radius: 6px;
   max-width: 200px;
   max-height: 200px;
 }
 
 #results {
-  background-color:#1b1b1b8c;
+  background-color:#1b1b1b;
   position: absolute;
   top: 16%;
   z-index: 1000;

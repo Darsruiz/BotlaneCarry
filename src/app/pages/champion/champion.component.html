@@ -32,7 +32,7 @@
 <div *ngIf="section == 1">
   <mat-grid-list cols="3" rowHeight="405:239" id="skins">
     <mat-grid-tile *ngFor="let row of arrayN; let i = index">
-      <a [href]="skins(champion, row)"><img [src]="skins(champion, row)" alt="Skin champion"></a>
+      <img [src]="skins(champion, row)" alt="Skin champion">
     </mat-grid-tile>
   </mat-grid-list>
 </div>
