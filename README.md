@@ -15,6 +15,6 @@ i will go through the code to fix bugs and Unit Testing.
 
 ## Resources Used
 
-Angular
-Angular Material
-Riot's API
+* Angular
+* Angular Material
+* Riot's API
