@@ -17,4 +17,5 @@ i will go through the code to fix bugs and Unit Testing.
 
 * Angular
 * Angular Material
+* PWA
 * Riot's API
