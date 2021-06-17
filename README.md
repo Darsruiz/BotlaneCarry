@@ -5,8 +5,8 @@ League of Legends project in which you get information from each champion:
 * Skins
 * Tips
 
-You can access it from here:
-https://botlanecarry.web.app/
+[You can access it from here](https://botlanecarry.web.app/)
+
 
 ## Cleaning up Code
 
