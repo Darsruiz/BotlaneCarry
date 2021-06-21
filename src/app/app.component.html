@@ -38,7 +38,7 @@
   <form id="search">
     <mat-form-field >
       <input matInput type="text" [(ngModel)]="values" name="values" placeholder="Type to search"
-        (keyup)="filterArrays($event.target.value)" />
+        (keyup)="filterArrays($any($event.target).value)" />
     </mat-form-field>
   </form>
 </div>

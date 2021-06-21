@@ -1,6 +1,6 @@
 <mat-grid-list [ngClass]="width > 576 ? 'grande' : 'pequeno'" (resized)="onResized($event)" [cols]="width > 576 ? '3' : '4'" [rowHeight]="width > 576 ? '16:9' : '1:1'">
   <mat-grid-tile *ngFor="resetLineaLink(); let row of placeholderArray; let i = index"  >
-    <img [src]="width > 576 ? seleccionLineas(lineaLink, i) : miniaturas(lineaLink, i)" [routerLink]="['/champion',nameTemp]" >
+    <img [src]="width > 576 ? seleccionLineas(lineaLink, i) : miniaturas(lineaLink, i)" [routerLink]="['/champion',nameTemp]" [alt]="nameTemp" >
     <mat-grid-tile-footer>{{ unCamelCase() }}</mat-grid-tile-footer>
   </mat-grid-tile>
 </mat-grid-list>
